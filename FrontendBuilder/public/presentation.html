@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>TouchCraft AI - Pitch Deck</title>
+
+    <!-- External Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+        :root {
+            --slide-width: 1280px;
+            --slide-height: 720px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* Darker slate for the outer background */
+            color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Presentation Canvas */
+        #presentation-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: var(--slide-width);
+            height: var(--slide-height);
+            transform-origin: center center;
+            background-color: #0f172a; /* Slate 900 */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            border-radius: 8px; /* Slight rounding for modern feel */
+        }
+
+        /* Global Background Mesh */
+        .bg-mesh {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                    radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
+                    radial-gradient(circle at 85% 30%, rgba(167, 139, 250, 0.08), transparent 25%),
+                    url("https://page.gensparksite.com/slides_images/2dc07531dbc0babfdd76ba8072eceea5.webp");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Slide Logic & Animations */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: scale(0.98);
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            z-index: 10;
+        }
+
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+            padding: 24px 60px;
+            box-sizing: border-box;
+        }
+
+        .slide-container.cover-slide {
+            padding: 0;
+        }
+
+        /* Typography */
+        h1, .font-space-grotesk {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Animation classes for elements inside active slides */
+        .slide.active .animate-up {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .slide.active .animate-up-delay-1 {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+            opacity: 0;
+        }
+
+        .slide.active .animate-up-delay-2 {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Controls */
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: opacity 0.3s;
+            opacity: 0.3;
+        }
+
+        .controls:hover {
+            opacity: 1;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .control-btn:hover:not(:disabled) {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .control-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-variant-numeric: tabular-nums;
+            font-size: 14px;
+            font-weight: 600;
+            color: #e2e8f0;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* --- Shared Specific Slide Styles --- */
+        .grid-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Highlight classes */
+        .text-sky-400 { color: #38bdf8; }
+        .text-rose-400 { color: #fb7185; }
+        .text-emerald-400 { color: #34d399; }
+
+        /* Matrix specific */
+        .matrix-row:hover { background-color: rgba(255, 255, 255, 0.03); }
+        .highlight-col { background-color: rgba(56, 189, 248, 0.08); border-left: 1px solid rgba(56, 189, 248, 0.2); border-right: 1px solid rgba(56, 189, 248, 0.2); }
+
+    </style>
+</head>
+<body>
+
+<!-- Main Presentation Scalable Canvas -->
+<div id="presentation-wrapper">
+    <div class="bg-mesh"></div>
+
+    <!-- ================= SLIDE 1: COVER ================= -->
+    <div class="slide active">
+        <div class="grid-overlay"></div>
+        <div class="slide-container cover-slide">
+            <!-- Header -->
+            <div class="animate-up" style="padding: 40px 60px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 32px; height: 32px; background-color: #38bdf8; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-cube" style="color: #0f172a; font-size: 18px;"></i>
+                    </div>
+                    <p style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; margin: 0;">TouchCraft AI</p>
+                </div>
+                <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin: 0;">Pitch Deck 2026</p>
+            </div>
+
+            <!-- Main Content -->
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 120px;">
+                <div class="animate-up-delay-1" style="display: inline-flex; align-items: center; padding: 8px 16px; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 9999px; font-size: 14px; font-weight: 600; margin-bottom: 32px; color: #60a5fa; width: fit-content;">
+                    <i class="fa-solid fa-bolt" style="margin-right: 8px;"></i> The Future of Web Development
+                </div>
+
+                <h1 class="animate-up-delay-1" style="font-size: 84px; margin: 0 0 24px 0; color: white; line-height: 1.1; letter-spacing: -0.02em;">
+                    TouchCraft <span style="color: #38bdf8;">AI</span>
+                </h1>
+
+                <div class="animate-up-delay-2" style="width: 80px; height: 6px; background-color: #38bdf8; margin: 40px 0; border-radius: 3px;"></div>
+
+                <p class="animate-up-delay-2" style="font-size: 36px; font-weight: 600; color: #e2e8f0; margin: 0 0 16px 0; max-width: 900px; line-height: 1.3;">
+                    The speed of <span style="color: #ffffff;">Framer</span>. <br/>
+                    The simplicity of <span style="color: #ffffff;">Tilda</span>. <br/>
+                    The clean code of a <span style="color: #38bdf8;">Senior Developer</span>.
+                </p>
+
+                <p class="animate-up-delay-2" style="font-size: 20px; color: #94a3b8; margin: 24px 0 0 0; max-width: 700px; line-height: 1.6;">
+                    The first AI builder that doesn't just mock up designs—it writes real, production-grade applications ready for scale.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="animate-up-delay-2" style="padding: 40px 60px; display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div>
+                    <p style="font-size: 12px; color: #64748b; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.05em;">Presented By</p>
+                    <p style="font-size: 16px; font-weight: 600; margin: 0;">TouchCraft Team</p>
+                </div>
+                <div>
+                    <p style="font-size: 12px; color: #64748b; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.05em;">Date</p>
+                    <p style="font-size: 16px; font-weight: 600; margin: 0;">February 28, 2026</p>
+                </div>
+                <div style="margin-left: auto; display: flex; align-items: center;">
+                    <p style="font-size: 14px; color: #94a3b8; margin: 0;">touchcraftai.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 2: THE PROBLEM ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-4 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-rose-500 bg-opacity-10 text-rose-400 rounded-full text-xs font-bold uppercase tracking-wider border border-rose-500 border-opacity-20">The Market Gap</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">The Problem: Two Broken Extremes</h1>
+                    <p class="text-lg text-slate-400 mt-2 m-0 max-w-3xl">Modern web development forces businesses to choose between usability and quality.</p>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 opacity-60">
+                    <i class="fa-solid fa-cube"></i> <span class="font-space-grotesk font-bold text-sm">TouchCraft AI</span>
+                </div>
+            </div>
+
+            <div class="flex gap-10 flex-1 mt-5 mb-8 relative animate-up-delay-1">
+                <!-- VS Badge -->
+                <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #0f172a; border: 2px solid rgba(255,255,255,0.1); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #64748b; z-index: 20; box-shadow: 0 0 0 8px rgba(15, 23, 42, 0.5);">VS</div>
+
+                <!-- Card 1 -->
+                <div style="flex: 1; background-color: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; backdrop-filter: blur(10px);">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; background-color: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3);">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold m-0 text-white">Website Builders</h2>
+                            <p class="text-sm text-slate-400 m-0 mt-1">Wix, Tilda, WordPress</p>
+                        </div>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="flex items-start gap-3 mb-4 text-slate-300">
+                            <i class="fa-solid fa-code text-rose-400 mt-1 w-5"></i>
+                            <span><strong>Terrible Output:</strong> Generates "div soup", bloat, and requires heavy plugins to function.</span>
+                        </li>
+                        <li class="flex items-start gap-3 mb-4 text-slate-300">
+                            <i class="fa-solid fa-lock text-rose-400 mt-1 w-5"></i>
+                            <span><strong>Vendor Lock-in:</strong> Complete dependency. You can't export the code or scale into a web app.</span>
+                        </li>
+                        <li class="flex items-start gap-3 mb-4 text-slate-300">
+                            <i class="fa-solid fa-gauge-high text-rose-400 mt-1 w-5"></i>
+                            <span><strong>Slow Performance:</strong> Heavy loading times that hurt SEO and user experience.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div style="flex: 1; background-color: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; backdrop-filter: blur(10px);">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; background-color: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold m-0 text-white">AI for Coders</h2>
+                            <p class="text-sm text-slate-400 m-0 mt-1">v0, Cursor, Bolt.new</p>
+                        </div>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="flex items-start gap-3 mb-4 text-slate-300">
+                            <i class="fa-solid fa-graduation-cap text-sky-400 mt-1 w-5"></i>
+                            <span><strong>High Barrier:</strong> Generates excellent code but requires programming skills to implement.</span>
+                        </li>
+                        <li class="flex items-start gap-3 mb-4 text-slate-300">
+                            <i class="fa-solid fa-eye-slash text-sky-400 mt-1 w-5"></i>
+                            <span><strong>No Visual Editor:</strong> Impossible for marketers or business owners to tweak designs.</span>
+                        </li>
+                        <li class="flex items-start gap-3 mb-4 text-slate-300">
+                            <i class="fa-solid fa-server text-sky-400 mt-1 w-5"></i>
+                            <span><strong>Zero Infrastructure:</strong> Lacks built-in databases, lead capture, or hosting setup.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="animate-up-delay-2" style="background-color: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-left: 4px solid #f43f5e; border-radius: 8px; padding: 20px 30px; margin-top: auto; display: flex; align-items: center; gap: 20px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);">
+                <div class="w-10 h-10 rounded-full bg-rose-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-rose-400">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white m-0">The Bottom Line</h3>
+                    <p class="text-slate-300 m-0 mt-1 text-base">Businesses either pay <strong>$20k+</strong> to dev agencies for clean code or settle for the restrictive limits of builders.</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-6 right-8 text-slate-600 text-sm font-mono">02</div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 3: THE SOLUTION ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-start mb-8 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-sky-500 bg-opacity-10 text-sky-400 rounded-full text-xs font-bold uppercase tracking-wider border border-sky-500 border-opacity-20">The Solution</span>
+                    </div>
+                    <h1 class="text-5xl text-white m-0 leading-tight">TouchCraft AI</h1>
+                    <p class="text-xl text-slate-300 mt-2 m-0 font-light">The first AI builder that writes <span class="text-sky-400 font-semibold">real applications</span>.</p>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 opacity-60">
+                    <i class="fa-solid fa-cube"></i> <span class="font-space-grotesk font-bold text-sm">TouchCraft AI</span>
+                </div>
+            </div>
+
+            <div class="flex gap-6 h-full items-stretch animate-up-delay-1">
+                <!-- Step 1 -->
+                <div class="flex-1 relative">
+                    <div style="background-color: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; height: 100%;">
+                        <div style="font-family: 'Space Grotesk'; font-size: 48px; font-weight: 700; color: rgba(255,255,255,0.1); line-height: 1; margin-bottom: 16px;">01</div>
+                        <div class="mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-slate-700 flex items-center justify-center text-sky-400 text-xl mb-4">
+                                <i class="fa-solid fa-keyboard"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white m-0 mb-2">Prompt It</h3>
+                            <p class="text-sm text-slate-400 m-0 leading-relaxed">You write a simple natural language prompt describing your vision. No complex drag-and-drop required.</p>
+                        </div>
+                        <div class="mt-auto p-3 bg-slate-900 rounded border border-slate-700">
+                            <p class="font-mono text-xs text-slate-400 m-0">"Build a landing page for a SaaS coffee startup..."</p>
+                        </div>
+                    </div>
+                    <div style="position: absolute; top: 50%; right: -18px; transform: translateY(-50%); color: rgba(255,255,255,0.2); font-size: 24px; z-index: 20;"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex-1 relative">
+                    <div style="background-color: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; height: 100%;">
+                        <div style="font-family: 'Space Grotesk'; font-size: 48px; font-weight: 700; color: rgba(255,255,255,0.1); line-height: 1; margin-bottom: 16px;">02</div>
+                        <div class="mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-slate-700 flex items-center justify-center text-purple-400 text-xl mb-4">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white m-0 mb-2">AI Generates</h3>
+                            <p class="text-sm text-slate-400 m-0 leading-relaxed">Our engine generates the UI design, writes compelling copy, and selects relevant images instantly.</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-2 gap-2">
+                            <div class="h-10 bg-slate-700 rounded w-full"></div>
+                            <div class="h-10 bg-slate-700 rounded w-full"></div>
+                            <div class="h-10 bg-slate-700 rounded w-full col-span-2"></div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; top: 50%; right: -18px; transform: translateY(-50%); color: rgba(255,255,255,0.2); font-size: 24px; z-index: 20;"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex-[1.5] relative">
+                    <div style="background-color: rgba(30, 41, 59, 0.8); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; height: 100%;">
+                        <div style="font-family: 'Space Grotesk'; font-size: 48px; font-weight: 700; color: rgba(56, 189, 248, 0.2); line-height: 1; margin-bottom: 16px;">03</div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-2xl font-bold text-white m-0">The Magic</h3>
+                            <span class="px-2 py-1 bg-sky-500 text-white text-xs font-bold rounded uppercase">Under the hood</span>
+                        </div>
+                        <p class="text-slate-300 m-0 mb-4 leading-relaxed">We don't just draw a mock-up. We build a production-ready <strong>SPA</strong> containerized in Docker.</p>
+
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div style="display:inline-flex; align-items:center; padding:6px 12px; border-radius:6px; font-size:12px; font-weight:600; background-color:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.1);" class="text-green-400"><i class="fa-brands fa-vuejs mr-2"></i>Vue 3</div>
+                            <div style="display:inline-flex; align-items:center; padding:6px 12px; border-radius:6px; font-size:12px; font-weight:600; background-color:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.1);" class="text-cyan-400"><i class="fa-solid fa-wind mr-2"></i>Tailwind</div>
+                            <div style="display:inline-flex; align-items:center; padding:6px 12px; border-radius:6px; font-size:12px; font-weight:600; background-color:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.1);" class="text-blue-400"><i class="fa-brands fa-docker mr-2"></i>Docker</div>
+                        </div>
+
+                        <div style="background-color: rgba(15, 23, 42, 0.8); border: 1px solid #38bdf8; border-radius: 12px; padding: 20px; position: relative; overflow: hidden; flex: 1;">
+                            <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background-color: #38bdf8;"></div>
+                            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e2e8f0; line-height: 1.6;">
+                                <span style="color:#c084fc">export default</span> <span style="color:#c084fc">defineComponent</span>({<br/>
+                                &nbsp;&nbsp;<span style="color:#60a5fa">setup</span>() {<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#c084fc">return</span> () => (<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">&lt;div</span> <span style="color:#60a5fa">class</span>=<span style="color:#a3e635">"flex flex-col h-screen"</span><span style="color:#f472b6">&gt;</span><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">&lt;AppHeader</span> <span style="color:#60a5fa">user</span>={user} <span style="color:#f472b6">/&gt;</span><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">&lt;RouterView</span> <span style="color:#f472b6">/&gt;</span><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">&lt;/div&gt;</span><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;);<br/>
+                                &nbsp;&nbsp;}<br/>
+                                });
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-800 flex justify-between items-center text-slate-500 text-sm animate-up-delay-2">
+                <p class="m-0"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i>Not a disposable prototype. Ready to scale.</p>
+                <p class="m-0 font-mono">03</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 4: KEY ADVANTAGES ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-6 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-teal-500 bg-opacity-10 text-teal-400 rounded-full text-xs font-bold uppercase tracking-wider border border-teal-500 border-opacity-20">Killer Features</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">Why are we better than the status quo?</h1>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 opacity-60">
+                    <i class="fa-solid fa-cube"></i> <span class="font-space-grotesk font-bold text-sm">TouchCraft AI</span>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; height: 100%; margin-top: 20px;" class="animate-up-delay-1">
+
+                <!-- Feature 1 -->
+                <div style="background-color: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-top: 4px solid #38bdf8; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(8px);">
+                    <div style="width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);">
+                        <i class="fa-solid fa-file-code text-sky-400 text-3xl"></i>
+                    </div>
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; color: #e0f2fe;">Clean, Exportable Code</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #cbd5e1; margin: 0 0 24px 0; flex-grow: 1;">No vendor lock-in. Clients own their platform and can export raw, readable source code at any time.</p>
+                    <ul style="margin: 0; padding: 16px; list-style: none; background-color: rgba(15, 23, 42, 0.4); border-radius: 12px;">
+                        <li class="flex items-start gap-2 mb-2 text-sm text-slate-400"><i class="fa-solid fa-check text-sky-400 mt-1"></i> Pure Vue 3 + Tailwind CSS</li>
+                        <li class="flex items-start gap-2 mb-2 text-sm text-slate-400"><i class="fa-solid fa-check text-sky-400 mt-1"></i> Developer-friendly structure</li>
+                        <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fa-solid fa-check text-sky-400 mt-1"></i> Git integration ready</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div style="background-color: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-top: 4px solid #fbbf24; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(8px);">
+                    <div style="width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 20px rgba(251, 191, 36, 0.15);">
+                        <i class="fa-solid fa-bolt text-amber-400 text-3xl"></i>
+                    </div>
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; color: #fef3c7;">Lightning Fast Performance</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #cbd5e1; margin: 0 0 24px 0; flex-grow: 1;">Sites operate like modern web apps with no page reloads, ensuring perfect SEO scores and user experience.</p>
+                    <ul style="margin: 0; padding: 16px; list-style: none; background-color: rgba(15, 23, 42, 0.4); border-radius: 12px;">
+                        <li class="flex items-start gap-2 mb-2 text-sm text-slate-400"><i class="fa-solid fa-check text-amber-400 mt-1"></i> SPA architecture</li>
+                        <li class="flex items-start gap-2 mb-2 text-sm text-slate-400"><i class="fa-solid fa-check text-amber-400 mt-1"></i> Instant page transitions</li>
+                        <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fa-solid fa-check text-amber-400 mt-1"></i> 99+ Google Lighthouse score</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div style="background-color: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-top: 4px solid #a78bfa; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(8px);">
+                    <div style="width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 0 20px rgba(167, 139, 250, 0.15);">
+                        <i class="fa-solid fa-server text-violet-400 text-3xl"></i>
+                    </div>
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; color: #ede9fe;">All-Inclusive Infrastructure</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #cbd5e1; margin: 0 0 24px 0; flex-grow: 1;">We don't just draw UI. The user instantly gets a full backend stack ready for business operations.</p>
+                    <ul style="margin: 0; padding: 16px; list-style: none; background-color: rgba(15, 23, 42, 0.4); border-radius: 12px;">
+                        <li class="flex items-start gap-2 mb-2 text-sm text-slate-400"><i class="fa-solid fa-check text-violet-400 mt-1"></i> Lead generation (Forms)</li>
+                        <li class="flex items-start gap-2 mb-2 text-sm text-slate-400"><i class="fa-solid fa-check text-violet-400 mt-1"></i> Multi-language support</li>
+                        <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fa-solid fa-check text-violet-400 mt-1"></i> Auto SSL & Subdomains</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-4 flex justify-end animate-up-delay-2">
+                <p class="text-slate-600 text-sm font-mono m-0">04</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 5: TARGET AUDIENCE ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-2 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-indigo-500 bg-opacity-10 text-indigo-400 rounded-full text-xs font-bold uppercase tracking-wider border border-indigo-500 border-opacity-20">Target Audience</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">Who are we building this for?</h1>
+                    <p class="text-lg text-slate-400 mt-2 m-0 max-w-3xl">Solving distinct problems for three massive market segments.</p>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 opacity-60">
+                    <i class="fa-solid fa-cube"></i> <span class="font-space-grotesk font-bold text-sm">TouchCraft AI</span>
+                </div>
+            </div>
+
+            <div class="flex gap-6 flex-1 mt-4 mb-4 items-stretch animate-up-delay-1">
+
+                <!-- Agency -->
+                <div style="flex: 1; background-color: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 6px solid #0ea5e9; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(12px);">
+                    <div style="width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; background-color: #0ea5e9; color: white; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #bae6fd;">Agencies & Freelancers</h3>
+                    <div style="display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 12px; width: fit-content; background-color: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.2);">
+                        <i class="fa-solid fa-bolt mr-2"></i> 10x Velocity
+                    </div>
+                    <p style="font-size: 15px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0;">They need to deliver high-quality projects faster to increase margins.</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="flex items-start gap-3 mb-3 text-[15px] text-slate-300"><i class="fa-solid fa-check text-sky-400 mt-1"></i> Sell "clean code" at premium</li>
+                        <li class="flex items-start gap-3 mb-3 text-[15px] text-slate-300"><i class="fa-solid fa-check text-sky-400 mt-1"></i> Seamless handoff to devs</li>
+                    </ul>
+                    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div style="font-family: 'Space Grotesk'; font-size: 28px; font-weight: 700; color: white;">65%</div>
+                        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b;">Faster Delivery</div>
+                    </div>
+                </div>
+
+                <!-- Startups -->
+                <div style="flex: 1; background-color: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 6px solid #ec4899; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(12px);">
+                    <div style="width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; background-color: #ec4899; color: white; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #fbcfe8;">Startups (MVPs)</h3>
+                    <div style="display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 12px; width: fit-content; background-color: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.2);">
+                        <i class="fa-solid fa-code-branch mr-2"></i> Scalable Base
+                    </div>
+                    <p style="font-size: 15px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0;">Founders who need to validate ideas instantly without incurring technical debt.</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="flex items-start gap-3 mb-3 text-[15px] text-slate-300"><i class="fa-solid fa-check text-pink-400 mt-1"></i> Rapid launch & testing</li>
+                        <li class="flex items-start gap-3 mb-3 text-[15px] text-slate-300"><i class="fa-solid fa-check text-pink-400 mt-1"></i> No "throwaway code"</li>
+                    </ul>
+                    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div style="font-family: 'Space Grotesk'; font-size: 28px; font-weight: 700; color: white;">$15k+</div>
+                        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b;">Dev Cost Saved</div>
+                    </div>
+                </div>
+
+                <!-- SMBs -->
+                <div style="flex: 1; background-color: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 6px solid #10b981; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(12px);">
+                    <div style="width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; background-color: #10b981; color: white; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #a7f3d0;">SMBs</h3>
+                    <div style="display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 12px; width: fit-content; background-color: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.2);">
+                        <i class="fa-solid fa-globe mr-2"></i> Business Ready
+                    </div>
+                    <p style="font-size: 15px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0;">Business owners needing functional tools, not just pretty landing pages.</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="flex items-start gap-3 mb-3 text-[15px] text-slate-300"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Built-in forms & tools</li>
+                        <li class="flex items-start gap-3 mb-3 text-[15px] text-slate-300"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Zero maintenance</li>
+                    </ul>
+                    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div style="font-family: 'Space Grotesk'; font-size: 28px; font-weight: 700; color: white;">Zero</div>
+                        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b;">Tech Skills Needed</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-auto pt-2 flex justify-between items-center border-t border-slate-800 animate-up-delay-2">
+                <p class="text-slate-500 text-sm m-0">Focusing on high-value segments where code quality matters.</p>
+                <p class="text-slate-600 text-sm font-mono m-0">05</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 6: COMPETITIVE LANDSCAPE ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-2 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-amber-500 bg-opacity-10 text-amber-400 rounded-full text-xs font-bold uppercase tracking-wider border border-amber-500 border-opacity-20">Market Analysis</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">Who are we sharing the market with?</h1>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 30px; margin-bottom: 20px; flex: 1; position: relative;" class="animate-up-delay-1">
+
+                <!-- Legacy Giants -->
+                <div style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 4px solid #64748b; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; backdrop-filter: blur(4px);">
+                    <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 16px; margin-bottom: 20px;">
+                        <div style="width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; background-color: rgba(100, 116, 139, 0.2); color: #94a3b8;">
+                            <i class="fa-brands fa-wordpress-simple"></i>
+                        </div>
+                        <h3 style="font-family: 'Space Grotesk'; font-size: 18px; font-weight: 700; color: #e2e8f0; margin: 0;">Legacy Giants</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <div class="px-2 py-1 bg-white bg-opacity-5 rounded text-xs text-slate-400 border border-white border-opacity-5"><i class="fa-brands fa-wordpress"></i> WordPress</div>
+                        <div class="px-2 py-1 bg-white bg-opacity-5 rounded text-xs text-slate-400 border border-white border-opacity-5"><i class="fa-brands fa-wix"></i> Wix</div>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="flex items-start gap-2 mb-3 text-sm text-slate-300 leading-snug"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> <p class="m-0"><strong>Bloated:</strong> Heavy reliance on plugins creates lag.</p></div>
+                        <div class="flex items-start gap-2 text-sm text-slate-300 leading-snug"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> <p class="m-0"><strong>Security Risks:</strong> Frequent target for hacks.</p></div>
+                    </div>
+                </div>
+
+                <!-- Design Tools -->
+                <div style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 4px solid #ec4899; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; backdrop-filter: blur(4px);">
+                    <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 16px; margin-bottom: 20px;">
+                        <div style="width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; background-color: rgba(236, 72, 153, 0.2); color: #f472b6;">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 style="font-family: 'Space Grotesk'; font-size: 18px; font-weight: 700; color: #e2e8f0; margin: 0;">Design Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <div class="px-2 py-1 bg-white bg-opacity-5 rounded text-xs text-slate-400 border border-white border-opacity-5"><i class="fa-solid fa-f"></i> Framer</div>
+                        <div class="px-2 py-1 bg-white bg-opacity-5 rounded text-xs text-slate-400 border border-white border-opacity-5"><i class="fa-brands fa-webflow"></i> Webflow</div>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="flex items-start gap-2 mb-3 text-sm text-slate-300 leading-snug"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> <p class="m-0"><strong>"Dirty" Code:</strong> Proprietary unexportable output.</p></div>
+                        <div class="flex items-start gap-2 text-sm text-slate-300 leading-snug"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> <p class="m-0"><strong>Backend Hell:</strong> Hard to integrate with databases.</p></div>
+                    </div>
+                </div>
+
+                <!-- AI for Devs -->
+                <div style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 4px solid #10b981; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; backdrop-filter: blur(4px);">
+                    <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 16px; margin-bottom: 20px;">
+                        <div style="width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; background-color: rgba(16, 185, 129, 0.2); color: #34d399;">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 style="font-family: 'Space Grotesk'; font-size: 18px; font-weight: 700; color: #e2e8f0; margin: 0;">AI for Devs</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <div class="px-2 py-1 bg-white bg-opacity-5 rounded text-xs text-slate-400 border border-white border-opacity-5"><i class="fa-solid fa-v"></i> v0 (Vercel)</div>
+                        <div class="px-2 py-1 bg-white bg-opacity-5 rounded text-xs text-slate-400 border border-white border-opacity-5"><i class="fa-solid fa-bolt"></i> Bolt.new</div>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="flex items-start gap-2 mb-3 text-sm text-slate-300 leading-snug"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> <p class="m-0"><strong>Tech Barrier:</strong> Unusable for non-technical users.</p></div>
+                        <div class="flex items-start gap-2 text-sm text-slate-300 leading-snug"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> <p class="m-0"><strong>No Logic:</strong> Lacks CMS or built-in billing.</p></div>
+                    </div>
+                </div>
+
+                <!-- Our Position Overlay -->
+                <div style="grid-column: 1 / -1; background-color: rgba(56, 189, 248, 0.1); border: 1px solid #38bdf8; border-radius: 16px; margin-top: 10px; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 0 40px rgba(56, 189, 248, 0.1);">
+                    <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background-color: #38bdf8;"></div>
+                    <div style="flex: 1;">
+                        <div style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; color: #fff; margin: 0 0 8px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fa-solid fa-star text-sky-400"></i> We Occupy the Empty Middle
+                        </div>
+                        <p style="font-size: 18px; color: #bae6fd; margin: 0;">The only platform combining <strong>Visual No-Code Simplicity</strong> with <strong>High-Quality Exportable Code</strong>.</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 16px; background-color: rgba(15, 23, 42, 0.5); padding: 12px 24px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.3);">
+                        <span style="font-size: 14px; font-weight: 600; color: white;">No-Code Speed</span>
+                        <i class="fa-solid fa-plus text-sky-400"></i>
+                        <span style="font-size: 14px; font-weight: 600; color: white;">Pro-Code Quality</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-2 flex justify-between items-center border-t border-slate-800 animate-up-delay-2">
+                <p class="text-slate-500 text-sm m-0">Positioning based on current market capabilities in Q1 2026.</p>
+                <p class="text-slate-600 text-sm font-mono m-0">06</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 7: COMPETITIVE MATRIX ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-4 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-3 py-1 bg-purple-500 bg-opacity-10 text-purple-400 rounded-full text-xs font-bold uppercase tracking-wider border border-purple-500 border-opacity-20">Competitive Matrix</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">TouchCraft AI vs. The Market</h1>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 opacity-60">
+                    <i class="fa-solid fa-cube"></i> <span class="font-space-grotesk font-bold text-sm">TouchCraft AI</span>
+                </div>
+            </div>
+
+            <div class="animate-up-delay-1" style="flex: 1; margin-top: 15px; background-color: rgba(15, 23, 42, 0.4); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); overflow: visible; display: flex; flex-direction: column;">
+
+                <!-- Header Row -->
+                <div style="display: grid; grid-template-columns: 260px 1.2fr 1fr 1fr 1fr; background-color: rgba(30, 41, 59, 0.5); border-bottom: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px 20px 0 0;">
+                    <div style="padding: 20px 32px; display: flex; align-items: flex-end; justify-content: flex-start;">
+                        <span class="text-slate-400 uppercase text-xs font-bold tracking-wider">Features</span>
+                    </div>
+                    <!-- TouchCraft -->
+                    <div class="highlight-col" style="padding: 20px 16px; border-top: 4px solid #38bdf8; display: flex; flex-direction: column; align-items: center; background-color: rgba(56, 189, 248, 0.15); position: relative;">
+                        <div style="position: absolute; top: -12px; background-color: #38bdf8; color: #0f172a; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; z-index: 10;">Our Solution</div>
+                        <div class="w-8 h-8 rounded-lg bg-sky-500 bg-opacity-20 flex items-center justify-center text-sky-400 mb-1"><i class="fa-solid fa-cube text-lg"></i></div>
+                        <span class="font-space-grotesk font-bold text-sky-400">TouchCraft AI</span>
+                    </div>
+                    <div style="padding: 20px 16px; display: flex; flex-direction: column; align-items: center;">
+                        <div class="text-pink-400 text-xl mb-1"><i class="fa-solid fa-palette"></i></div><span class="font-space-grotesk font-bold text-slate-300">Wix/Tilda</span>
+                    </div>
+                    <div style="padding: 20px 16px; display: flex; flex-direction: column; align-items: center;">
+                        <div class="text-slate-400 text-xl mb-1"><i class="fa-brands fa-wordpress"></i></div><span class="font-space-grotesk font-bold text-slate-300">WordPress</span>
+                    </div>
+                    <div style="padding: 20px 16px; display: flex; flex-direction: column; align-items: center;">
+                        <div class="text-white text-xl mb-1"><i class="fa-solid fa-terminal"></i></div><span class="font-space-grotesk font-bold text-slate-300">v0 (Vercel)</span>
+                    </div>
+                </div>
+
+                <!-- Body Rows -->
+                <div style="display: flex; flex-direction: column;">
+                    <!-- Row 1 -->
+                    <div class="matrix-row" style="display: grid; grid-template-columns: 260px 1.2fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="padding: 28px 32px; display: flex; align-items: center; font-weight: 600; color: #e2e8f0; font-size: 15px;">Full Site Generation</div>
+                        <div class="highlight-col flex items-center justify-center font-bold text-white"><span class="text-emerald-400"><i class="fa-solid fa-check-circle mr-1"></i> Yes, Full App</span></div>
+                        <div class="flex items-center justify-center"><span class="px-2 py-1 bg-amber-500 bg-opacity-10 text-amber-400 text-xs font-bold rounded border border-amber-500 border-opacity-20 uppercase">Basic</span></div>
+                        <div class="flex items-center justify-center"><span class="text-rose-400"><i class="fa-solid fa-xmark mr-1"></i> No</span></div>
+                        <div class="flex items-center justify-center"><span class="px-2 py-1 bg-amber-500 bg-opacity-10 text-amber-400 text-xs font-bold rounded border border-amber-500 border-opacity-20 uppercase">UI Only</span></div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="matrix-row" style="display: grid; grid-template-columns: 260px 1.2fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="padding: 28px 32px; display: flex; align-items: center; font-weight: 600; color: #e2e8f0; font-size: 15px;">Clean Code Quality</div>
+                        <div class="highlight-col flex flex-col items-center justify-center font-bold text-white">
+                            <span class="text-emerald-400"><i class="fa-solid fa-check mr-1"></i> Yes</span><span class="text-xs text-sky-300 opacity-80 font-mono mt-1">Vue/Tailwind</span>
+                        </div>
+                        <div class="flex items-center justify-center text-rose-400">"Div Soup"</div>
+                        <div class="flex items-center justify-center text-rose-400">PHP Mess</div>
+                        <div class="flex flex-col items-center justify-center text-emerald-400">
+                            <span class="text-emerald-400"><i class="fa-solid fa-check mr-1"></i> Yes</span><span class="text-xs text-slate-500 font-mono mt-1">React</span>
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="matrix-row" style="display: grid; grid-template-columns: 260px 1.2fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="padding: 28px 32px; display: flex; align-items: center; font-weight: 600; color: #e2e8f0; font-size: 15px;">Visual Editor (No-Code)</div>
+                        <div class="highlight-col flex items-center justify-center font-bold text-white"><span class="text-emerald-400"><i class="fa-solid fa-check-circle mr-1"></i> Yes</span></div>
+                        <div class="flex items-center justify-center text-emerald-400"><i class="fa-solid fa-check mr-1"></i> Yes</div>
+                        <div class="flex items-center justify-center text-emerald-400"><i class="fa-solid fa-check mr-1"></i> Yes</div>
+                        <div class="flex items-center justify-center text-rose-400"><i class="fa-solid fa-xmark mr-1"></i> No</div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="matrix-row" style="display: grid; grid-template-columns: 260px 1.2fr 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="padding: 28px 32px; display: flex; align-items: center; font-weight: 600; color: #e2e8f0; font-size: 15px;">Code Export</div>
+                        <div class="highlight-col flex items-center justify-center font-bold text-white"><span class="px-2 py-1 bg-sky-500 bg-opacity-10 text-sky-400 text-xs font-bold rounded border border-sky-500 border-opacity-20 uppercase">No Lock-in</span></div>
+                        <div class="flex items-center justify-center text-rose-400"><i class="fa-solid fa-xmark mr-1"></i> No</div>
+                        <div class="flex items-center justify-center text-amber-400">Complex</div>
+                        <div class="flex items-center justify-center text-emerald-400"><i class="fa-solid fa-check mr-1"></i> Yes</div>
+                    </div>
+                    <!-- Row 5 -->
+                    <div class="matrix-row" style="display: grid; grid-template-columns: 260px 1.2fr 1fr 1fr 1fr; border-radius: 0 0 20px 20px;">
+                        <div style="padding: 28px 32px; display: flex; align-items: center; font-weight: 600; color: #e2e8f0; font-size: 15px;">Performance</div>
+                        <div class="highlight-col flex items-center justify-center font-bold text-emerald-400"><i class="fa-solid fa-bolt mr-1"></i> SPA (Instant)</div>
+                        <div class="flex items-center justify-center text-slate-300">Fast</div>
+                        <div class="flex items-center justify-center text-slate-500">Slow</div>
+                        <div class="flex items-center justify-center text-emerald-400">SPA (Instant)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-3 flex justify-between items-center animate-up-delay-2">
+                <p class="text-slate-500 text-sm m-0"><i class="fa-solid fa-circle-info mr-1"></i> Comparison based on standard plan features.</p>
+                <p class="text-slate-600 text-sm font-mono m-0">07</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 8: BUSINESS MODEL ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-2 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-green-500 bg-opacity-10 text-green-400 rounded-full text-xs font-bold uppercase tracking-wider border border-green-500 border-opacity-20">Business Model</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">A proven SaaS model</h1>
+                    <p class="text-lg text-slate-400 mt-2 m-0">Start for free, upgrade when you need custom domains, e-commerce features, and more power.</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch;" class="animate-up-delay-1">
+
+                <!-- Freemium -->
+                <div style="background-color: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(12px); margin-bottom: 20px">
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; color: #fff;">Freemium</h3>
+                    <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0 0 24px 0; min-height: 42px;">Perfect to test the waters and see the AI magic in action.</p>
+
+                    <div style="display: flex; align-items: baseline; justify-content: flex-start; gap: 4px; margin-bottom: 24px;">
+                        <span style="font-family: 'Space Grotesk'; font-size: 50px; font-weight: 700; color: #fff; line-height: 1;">€0</span>
+                        <span style="font-size: 15px; color: #64748b;">/ first month</span>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin: 0 0 auto 0;">
+                        <li class="flex items-start gap-3 mb-4 text-sm text-slate-300"><i class="fa-solid fa-check text-slate-500 mt-1"></i> 1 Website included</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-slate-300"><i class="fa-solid fa-check text-slate-500 mt-1"></i> Basic AI Generation</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-slate-300"><i class="fa-solid fa-check text-slate-500 mt-1"></i> Free .touch-craft.com domain</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-slate-500"><i class="fa-solid fa-xmark mt-1"></i> No custom domains</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-slate-500"><i class="fa-solid fa-xmark mt-1"></i> No Lead Forms</li>
+                    </ul>
+                    <div style="padding: 14px; border-radius: 8px; font-weight: 600; font-size: 15px; text-align: center; margin-top: 24px; background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'" onmouseout="this.style.backgroundColor='transparent'">Start Free Trial</div>
+                </div>
+
+                <!-- Starter -->
+                <div style="background-color: rgba(30, 41, 59, 0.6); border: 2px solid #3b82f6; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(12px); box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.15); position: relative; z-index: 2; margin-bottom: 20px">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background-color: #3b82f6; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 16px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); z-index: 10;">MOST POPULAR</div>
+
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; color: #fff;">Starter</h3>
+                    <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0 0 24px 0; min-height: 42px;">For freelancers and small businesses needing professional presence.</p>
+
+                    <div style="display: flex; align-items: baseline; justify-content: flex-start; gap: 4px; margin-bottom: 24px;">
+                        <span style="font-family: 'Space Grotesk'; font-size: 50px; font-weight: 700; color: #fff; line-height: 1;">€15</span>
+                        <span style="font-size: 15px; color: #64748b;">/ month</span>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin: 0 0 auto 0;">
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-blue-400 mt-1"></i> Up to 5 Websites</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-blue-400 mt-1"></i> Custom Domains (SSL included)</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-blue-400 mt-1"></i> AI Image Generation</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-blue-400 mt-1"></i> Lead Forms & CRM Access</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-slate-400"><i class="fa-solid fa-xmark text-slate-500 mt-1"></i> No Product Catalog</li>
+                    </ul>
+                    <div style="padding: 14px; border-radius: 8px; font-weight: 600; font-size: 15px; text-align: center; margin-top: 24px; background-color: #3b82f6; color: #fff; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.backgroundColor='#2563eb'" onmouseout="this.style.backgroundColor='#3b82f6'">Starter</div>
+                </div>
+
+                <!-- Pro -->
+                <div style="background-color: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; backdrop-filter: blur(12px); margin-bottom: 20px">
+                    <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; color: #fff;">Pro</h3>
+                    <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0 0 24px 0; min-height: 42px;">For agencies and growing e-commerce brands.</p>
+
+                    <div style="display: flex; align-items: baseline; justify-content: flex-start; gap: 4px; margin-bottom: 24px;">
+                        <span style="font-family: 'Space Grotesk'; font-size: 50px; font-weight: 700; color: #fff; line-height: 1;">€25</span>
+                        <span style="font-size: 15px; color: #64748b;">/ month</span>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin: 0 0 auto 0;">
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-teal-400 mt-1"></i> Up to 10 Websites</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-teal-400 mt-1"></i> <strong>Dynamic Product Catalog</strong></li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-teal-400 mt-1"></i> Auto-translation (Up to 7 languages)</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-teal-400 mt-1"></i> Custom SMTP Email Alerts</li>
+                        <li class="flex items-start gap-3 mb-4 text-sm text-white"><i class="fa-solid fa-check text-teal-400 mt-1"></i> Priority Support</li>
+                    </ul>
+                    <div style="padding: 14px; border-radius: 8px; font-weight: 600; font-size: 15px; text-align: center; margin-top: 24px; background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'" onmouseout="this.style.backgroundColor='transparent'">Pro</div>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-4 flex justify-between items-center border-t border-slate-800 animate-up-delay-2">
+                <p class="text-slate-500 text-sm m-0"><i class="fa-brands fa-stripe mr-1"></i> Secure billing powered by Stripe.</p>
+                <p class="text-slate-600 text-sm font-mono m-0">08</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 9: ROADMAP ================= -->
+    <div class="slide">
+        <div class="slide-container">
+            <div class="flex justify-between items-end mb-2 animate-up">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-10 text-blue-400 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-500 border-opacity-20">Current Status & Roadmap</span>
+                    </div>
+                    <h1 class="text-4xl text-white m-0">What's done and what's next?</h1>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 opacity-60">
+                    <i class="fa-solid fa-cube"></i> <span class="font-space-grotesk font-bold text-sm">TouchCraft AI</span>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; flex: 1; height: 100%;" class="animate-up-delay-1">
+
+                <!-- Left: MVP -->
+                <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 4px solid #10b981; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; position: relative; backdrop-filter: blur(12px);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 12px;" class="text-emerald-400">
+                            <i class="fa-solid fa-circle-check"></i> MVP Delivered
+                        </h3>
+                        <span style="font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">Live Now</span>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <!-- Item 1 -->
+                        <div style="background-color: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 8px; background-color: rgba(16, 185, 129, 0.1); color: #34d399; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;"><i class="fa-solid fa-brain"></i></div>
+                            <div><h4 style="margin: 0 0 4px 0; font-size: 15px; color: #e2e8f0; font-weight: 600;">Gemini AI Core</h4><p style="margin: 0; font-size: 13px; color: #94a3b8; line-height: 1.4;">Architecture generation & scaffolding.</p></div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div style="background-color: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 8px; background-color: rgba(16, 185, 129, 0.1); color: #34d399; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;"><i class="fa-solid fa-layer-group"></i></div>
+                            <div><h4 style="margin: 0 0 4px 0; font-size: 15px; color: #e2e8f0; font-weight: 600;">18+ Components</h4><p style="margin: 0; font-size: 13px; color: #94a3b8; line-height: 1.4;">Ready-to-use business blocks.</p></div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div style="background-color: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 8px; background-color: rgba(16, 185, 129, 0.1); color: #34d399; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;"><i class="fa-brands fa-stripe-s"></i></div>
+                            <div><h4 style="margin: 0 0 4px 0; font-size: 15px; color: #e2e8f0; font-weight: 600;">Stripe Billing</h4><p style="margin: 0; font-size: 13px; color: #94a3b8; line-height: 1.4;">Monetization ready for clients.</p></div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div style="background-color: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 8px; background-color: rgba(16, 185, 129, 0.1); color: #34d399; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;"><i class="fa-solid fa-earth-americas"></i></div>
+                            <div><h4 style="margin: 0 0 4px 0; font-size: 15px; color: #e2e8f0; font-weight: 600;">i18n Support</h4><p style="margin: 0; font-size: 13px; color: #94a3b8; line-height: 1.4;">9 languages out-of-the-box.</p></div>
+                        </div>
+                    </div>
+                    <div class="mt-auto pt-6 flex items-center gap-3 text-sm text-emerald-400 opacity-80">
+                        <i class="fa-solid fa-check"></i> System is stable and onboarding first 100 users.
+                    </div>
+                </div>
+
+                <!-- Right: Up Next -->
+                <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 4px solid #38bdf8; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; position: relative; backdrop-filter: blur(12px);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="font-family: 'Space Grotesk'; font-size: 24px; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 12px;" class="text-sky-400">
+                            <i class="fa-solid fa-road"></i> Up Next
+                        </h3>
+                        <span style="font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; background-color: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">In Dev</span>
+                    </div>
+
+                    <div style="position: relative; padding-left: 24px; margin-top: 12px;">
+                        <div style="position: absolute; left: 0; top: 8px; bottom: 0; width: 2px; background: linear-gradient(180deg, #38bdf8 0%, rgba(56, 189, 248, 0.1) 100%);"></div>
+
+                        <!-- Timeline 1 -->
+                        <div style="position: relative; margin-bottom: 32px;">
+                            <div style="position: absolute; left: -30px; top: 0; width: 14px; height: 14px; border-radius: 50%; background-color: #0f172a; border: 2px solid #38bdf8; z-index: 2; box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);"></div>
+                            <span style="font-family: 'Space Grotesk'; font-size: 14px; font-weight: 700; color: #38bdf8; margin-bottom: 8px; display: inline-block;">Q2 2026</span>
+                            <div style="background-color: rgba(15, 23, 42, 0.6); border-radius: 12px; padding: 20px;">
+                                <h4 style="font-size: 18px; font-weight: 700; color: white; margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fa-solid fa-bolt text-white"></i> Batch AI Generation
+                                </h4>
+                                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.5; margin: 0;">Optimization to render full multi-page sites in under 30 seconds. Plus "Prop-Driven Design" allowing style changes without breaking data.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline 2 -->
+                        <div style="position: relative;">
+                            <div style="position: absolute; left: -30px; top: 0; width: 14px; height: 14px; border-radius: 50%; background-color: #0f172a; border: 2px solid #d946ef; z-index: 2; box-shadow: 0 0 10px rgba(217, 70, 239, 0.5);"></div>
+                            <span style="font-family: 'Space Grotesk'; font-size: 14px; font-weight: 700; color: #d946ef; margin-bottom: 8px; display: inline-block;">Q3 2026</span>
+                            <div style="background-color: rgba(15, 23, 42, 0.6); border-radius: 12px; padding: 20px;">
+                                <h4 style="font-size: 18px; font-weight: 700; color: white; margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fa-solid fa-cart-shopping text-pink-400"></i> E-commerce Engine
+                                </h4>
+                                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.5; margin: 0;">Full shopping cart and checkout integration directly on generated sites. Turning landing pages into revenue engines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-4 flex justify-end animate-up-delay-2">
+                <p class="text-slate-600 text-sm font-mono m-0">09</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Controls UI -->
+<div class="controls">
+    <button class="control-btn" id="prev-btn" onclick="prevSlide()" title="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">9</span></div>
+    <button class="control-btn" id="next-btn" onclick="nextSlide()" title="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- Presentation Engine Logic -->
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlideIndex = 0;
+
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const currentCounter = document.getElementById('current-slide');
+    document.getElementById('total-slides').innerText = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+                // Reset animations
+                const animatedElements = slide.querySelectorAll('.animate-up, .animate-up-delay-1, .animate-up-delay-2');
+                animatedElements.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; /* trigger reflow */
+                    el.style.animation = null;
+                });
+            }
+        });
+
+        currentCounter.innerText = index + 1;
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === slides.length - 1;
+        currentSlideIndex = index;
+    }
+
+    function nextSlide() {
+        if (currentSlideIndex < slides.length - 1) {
+            showSlide(currentSlideIndex + 1);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlideIndex > 0) {
+            showSlide(currentSlideIndex - 1);
+        }
+    }
+
+    // --- Keyboard Navigation ---
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'Enter') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+
+    // --- Touch / Swipe Navigation ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) nextSlide();
+        if (touchEndX > touchStartX + 50) prevSlide();
+    }
+
+    // --- Responsive Scaling Engine ---
+    function resizePresentation() {
+        const wrapper = document.getElementById('presentation-wrapper');
+        const targetWidth = 1280;
+        const targetHeight = 720;
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        // Allow a small padding margin around the presentation
+        const scaleWidth = windowWidth / targetWidth;
+        const scaleHeight = windowHeight / targetHeight;
+        const scale = Math.min(scaleWidth, scaleHeight) * 0.95;
+
+        wrapper.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+
+    window.addEventListener('resize', resizePresentation);
+
+    // Init
+    resizePresentation();
+    showSlide(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,781 @@
+{
+  "nav": {
+    "howItWorks": "Kuidas see töötab",
+    "features": "Funktsioonid",
+    "blocks": "Plokid",
+    "pricing": "Hinnakiri",
+    "aboutUs": "Meist",
+    "contact": "Kontakt",
+    "getStarted": "Alusta",
+    "language": "Keel"
+  },
+  "hero": {
+    "badge": "Lennuta oma ideid kiiremini",
+    "titleLine1": "Ehita tulevikku",
+    "titleLine2": "lihtsa viibaga",
+    "description": "TouchCraft ühendab turundajad, disainerid ja arendajad. Genereeri päris rakendusi puhta koodi, eelvaadete ja kohese deploomisega. Piiriks on vaid Sinu kujutlusvõime.",
+    "startFree": "Alusta tasuta",
+    "watchDemo": "Vaata videot"
+  },
+  "workflow": {
+    "subtitle": "Töövoog",
+    "title": "3 sammu toodanguni.",
+    "step1Title": "Kirjelda oma visiooni",
+    "step1Desc": "Lihtsalt trüki, mida soovid ehitada. Räägi meie tehisintellektile oma ärist, värvieelistustest ja vajalikest osadest.",
+    "step2Title": "AI genereerib koodi",
+    "step2Desc": "TouchCraft loob hetkega Vue.js rakenduse, struktureerib paigutuse, kirjutab tekstid ja genereerib pildid.",
+    "step3Title": "Avalda koheselt",
+    "step3Desc": "Klõpsa avaldamisnupul. Pakime Sinu saidi koodi, seadistame serveri ja käivitame selle koos SSL-sertifikaadiga sekunditega."
+  },
+  "features": {
+    "subtitle": "Kõik vajalik",
+    "title": "Viibast veebileheni.",
+    "description": "TouchCraft pakub täielikku ökosüsteemi veebirakenduste loomiseks, haldamiseks ja skaleerimiseks ilma ühtegi rida koodi kirjutamata.",
+    "item1Title": "AI-põhine genereerimine",
+    "item1Desc": "Loo terviklikke ja töövalmis Vue.js veebilehti koos tekstide ja piltidega vaid ühe kirjelduse põhjal.",
+    "item2Title": "Kohene avaldamine",
+    "item2Desc": "Sinu leht pakitakse automaatselt Dockerisse ja avaldatakse turvaliselt. Lisa oma domeen vaid ühe klõpsuga.",
+    "item3Title": "Emakeelne lokaliseerimine",
+    "item3Desc": "Sisseehitatud mitmekeelsuse tugi. AI tõlgib Sinu lehe automaatselt kuni 7 keelde koos korrektse navigeerimisega.",
+    "item4Title": "Sisseehitatud CRM ja päringud",
+    "item4Desc": "Kogu külastajate andmeid hetkega. Integreeritud päringute halduslaud koos automaatsete e-posti teavitustega.",
+    "item5Title": "Dünaamiline kataloog",
+    "item5Desc": "Loo tootevalikuid koos pildigaleriidega. Seadista toodete nähtavust dünaamiliselt vastavalt kasutaja keelele.",
+    "item6Title": "AI-vestluse redaktor",
+    "item6Desc": "Vajad muudatusi? Lihtsalt küsi. Meie AI-assistent muudab värve, tekste ja struktuuri reaalajas otse redaktoris."
+  },
+  "blocks": {
+    "subtitle": "Ehitusplokid",
+    "title": "Kõik, mida vajad ehitamiseks.",
+    "description": "Kombineeri nutikaid sektsioone. AI täidab need automaatselt asjakohase sisu ja kvaliteetsete piltidega.",
+    "hero": "Hero-sektsioon",
+    "features": "Funktsioonid",
+    "aboutUs": "Meist",
+    "faq": "KKK",
+    "maps": "Google kaardid",
+    "leadForms": "Päringuvormid"
+  },
+  "about": {
+    "subtitle": "Meie missioon",
+    "title": "Veebiarenduse demokratiseerimine.",
+    "para1": "Lõime TouchCrafti, sest usume, et professionaalse ja kiire veebilehe käivitamine ei peaks nõudma tervet arendajate meeskonda ega nädalaid tööd.",
+    "para2": "Kombineerides keelemudelite võimekuse moodsate raamistikega nagu Vue.js ja Docker, oleme loonud platvormi, kus ideedest saab tegelikkus mõttekiirusel.",
+    "stat1": "Kiirem",
+    "stat2": "Kohandatav"
+  },
+  "pricing": {
+    "subtitle": "Hinnakiri",
+    "title": "Kasva omas tempos.",
+    "description": "Alusta tasuta, uuenda paketti, kui vajad oma domeeni, e-kaubanduse funktsioone ja rohkem võimekust.",
+    "perMonthFirst": "/ esimene kuu",
+    "perMonth": "/ kuu",
+    "mostPopular": "Kõige populaarsem",
+    "startFreeTrial": "Alusta tasuta",
+    "getStarted": "Alusta",
+    "upgradePro": "Uuenda Pro paketile",
+    "free": {
+      "name": "Tasuta",
+      "desc": "Ideaalne AI võimekuse testimiseks ja esimese lehe proovimiseks.",
+      "feature1": "1 veebileht hinna sees",
+      "feature2": "AI põhiline genereerimine",
+      "feature3": "Tasuta .touch-craft.com domeen",
+      "feature4": "Oma domeeni lisamine puudub",
+      "feature5": "Päringuvormid puuduvad"
+    },
+    "starter": {
+      "name": "Starter",
+      "desc": "Vabakutselistele ja väikeettevõtetele professionaalseks kohaloluks.",
+      "feature1": "Kuni 5 veebilehte",
+      "feature2": "Oma domeenid (SSL-ga)",
+      "feature3": "AI piltide genereerimine",
+      "feature4": "Päringuvormid ja CRM",
+      "feature5": "Tootekataloog puudub"
+    },
+    "pro": {
+      "name": "Pro",
+      "desc": "Agentuuridele ja kasvavatele e-kaubanduse brändidele.",
+      "feature1": "Kuni 10 veebilehte",
+      "feature2": "Dünaamiline tootekataloog",
+      "feature3": "Automaatne tõlge (kuni 7 keelt)",
+      "feature4": "Eritellimusel SMTP teavitused",
+      "feature5": "Prioriteetne tugi"
+    }
+  },
+  "contact": {
+    "subtitle": "Võta ühendust",
+    "title": "Kas oled valmis oma töövoogu muutma?",
+    "description": "Saada meile sõnum ja meie meeskond vastab Sulle esimesel võimalusel.",
+    "nameLabel": "Sinu nimi",
+    "namePlaceholder": "Jaan Tamm",
+    "emailLabel": "E-posti aadress",
+    "emailPlaceholder": "jaan@näide.ee",
+    "messageLabel": "Sõnum",
+    "messagePlaceholder": "Kuidas saame Sind aidata?",
+    "captchaQ": "Kui palju on",
+    "captchaError": "Vale vastus. Palun proovi uuesti.",
+    "sending": "Sõnumi saatmine...",
+    "sendBtn": "Saada sõnum",
+    "successMsg": "Sõnum on edukalt saadetud! Võtame peagi ühendust.",
+    "errorMsg": "Sõnumi saatmine ebaõnnestus. Palun proovi uuesti."
+  },
+  "footer": {
+    "description": "Ülim AI-veebiehitaja. Genereeri, muuda ja avalda rakendusi sekunditega.",
+    "product": "Toode",
+    "company": "Ettevõte",
+    "privacy": "Privaatsuspoliitika",
+    "copyright": "© 2026 TouchCraft Inc. Kõik õigused kaitstud."
+  },
+  "privacy": {
+    "backToHome": "Tagasi avalehele",
+    "title": "Privaatsuspoliitika",
+    "lastUpdated": "Viimati uuendatud",
+    "intro": "Tere tulemast <strong>TouchCrafti</strong>. Austame Sinu privaatsust ja kaitseme Sinu isikuandmeid vastavalt <strong>EL isikuandmete kaitse üldmäärusele (GDPR)</strong>.",
+    "sec1": {
+      "title": "1. Vastutava töötleja andmed",
+      "entity": "Ettevõtte nimi:",
+      "email": "E-post privaatsusküsimuste korral:"
+    },
+    "sec2": {
+      "title": "2. Meie roll (Vastutav vs Volitatud töötleja)",
+      "desc": "Oma olemuselt tegutseme kahes rollis:",
+      "li1": "<strong>Vastutav töötleja:</strong> Kui loote konto või ostate tellimuse. Meie otsustame, kuidas andmeid töödeldakse.",
+      "li2": "<strong>Volitatud töötleja:</strong> Kui kasutate meie platvormi oma klientide andmete kogumiseks. Sellisel juhul olete <strong>Teie vastutav töötleja</strong> ja meie vaid hoiustame andmeid Teie nimel."
+    },
+    "sec3": {
+      "title": "3. Milliseid andmeid me kogume",
+      "th1": "Andmete tüüp",
+      "th2": "Töötlemise eesmärk",
+      "th3": "Õiguslik alus",
+      "r1c1": "<strong>Konto andmed:</strong> Nimi, e-post, parool.",
+      "r1c2": "Konto loomiseks ja teenuse pakkumiseks.",
+      "r1c3": "Lepingu täitmine.",
+      "r2c1": "<strong>Analüütika:</strong> IP-aadress, seadme info, GA4.",
+      "r2c2": "Turvalisuse tagamiseks ja UX parandamiseks.",
+      "r2c3": "Õigustatud huvi ja nõusolek.",
+      "r3c1": "<strong>AI-viibad:</strong> Tekstid saidi loomiseks.",
+      "r3c2": "Koodi ja piltide genereerimiseks läbi API.",
+      "r3c3": "Lepingu täitmine."
+    },
+    "sec4": {
+      "title": "4. Kolmandad osapooled",
+      "desc": "Me ei müü Sinu andmeid, kuid jagame neid usaldusväärsete partneritega teenuse osutamiseks:",
+      "li1": "<strong>Google LLC (Gemini API ja GA4):</strong> Genereerimine ja analüütika.",
+      "li2": "<strong>Auth0:</strong> Turvaline autentimine.",
+      "li3": "<strong>Pilveteenused:</strong> Andmete majutus Euroopa serverites."
+    },
+    "sec5": {
+      "title": "5. Andmete säilitamine",
+      "desc": "Säilitame andmeid nii kaua, kuni konto on aktiivne. Konto kustutamisel eemaldame andmed 30 päeva jooksul (v.a arved, mida hoiame seadusest tulenevalt kuni 5 aastat)."
+    },
+    "sec6": {
+      "title": "6. Sinu õigused",
+      "desc": "GDPR-i alusel on Sul õigus:",
+      "li1": "<strong>Juurdepääs:</strong> Küsi koopiat oma andmetest.",
+      "li2": "<strong>Parandamine:</strong> Muuda ebatäpseid andmeid.",
+      "li3": "<strong>Kustutamine:</strong> Õigus andmete eemaldamisele.",
+      "li4": "<strong>Piiramine:</strong> Palu andmete töötlemise peatamine.",
+      "li5": "<strong>Ülekandmine:</strong> Saada oma andmed masinloetaval kujul.",
+      "li6": "<strong>Nõusoleku tagasivõtmine:</strong> Loobu analüütikast igal ajal.",
+      "contact": "Õiguste kasutamiseks kirjuta"
+    },
+    "sec7": {
+      "title": "7. Kaebuse esitamine",
+      "desc": "Sul on õigus pöörduda Andmekaitse Inspektsiooni poole, kui leiad, et Sinu õigusi on rikutud.",
+      "website": "Veebileht:",
+      "address": "Aadress:"
+    },
+    "sec8": {
+      "title": "8. Küpsiste poliitika",
+      "desc": "Kasutame vajalikke küpsiseid sisselogimiseks ja valikulisi analüütikaks. Seadeid saab muuta küpsiste teavitusribal."
+    }
+  },
+  "createSite": {
+    "title": "Uue veebilehe seadistamine",
+    "labels": {
+      "businessName": "Ettevõtte nimi",
+      "niche": "Valdkond",
+      "nichePlaceholder": "nt. Tehnoloogiakonsultatsioon",
+      "description": "Kirjeldus (AI kontekst)",
+      "sections": "Vali lehe sektsioonid",
+      "languages": "Keeled",
+      "langSelectPlaceholder": "Vali keel...",
+      "legal": "Juriidilised ja kontaktandmed",
+      "legalName": "Juriidiline nimi",
+      "taxId": "Registrikood / KMKR / KM-nr",
+      "address": "Füüsiline aadress",
+      "phone": "Telefoninumber",
+      "email": "Kontakti e-post"
+    },
+    "upgrade": {
+      "maxSites": "Olete saavutanud oma paketis lubatud maksimaalse veebisaitide arvu.",
+      "leadForms": "Päringuvormid on saadaval alates Starter paketist.",
+      "maxLanguagesPro": "Mitmekeelsed saidid on saadaval ainult Pro paketis."
+    },
+    "sections": {
+      "hero": "Avalehe päis",
+      "about": "Meist",
+      "features": "Funktsioonid",
+      "faq": "KKK",
+      "map": "Kaart",
+      "contacts": "Kontaktid",
+      "form": "Päringuvorm",
+      "gallery": "Galerii"
+    },
+    "smtpWarning": "Vormide kasutamiseks on vaja seadistada SMTP.",
+    "setupNow": "Seadista kohe",
+    "buttons": {
+      "generating": "Veebilehe genereerimine...",
+      "generate": "Genereeri AI veebileht"
+    },
+    "alerts": {
+      "reqNameNiche": "Nimi ja valdkond on kohustuslikud.",
+      "reqLang": "Palun lisa vähemalt üks keel.",
+      "genFailed": "Genereerimine ebaõnnestus.",
+      "maxLanguages": "Olete saavutanud oma praeguses paketis lubatud maksimaalse keelte arvu."
+    }
+  },
+  "dashboard": {
+    "title": "Projektide haldamine",
+    "empty": {
+      "title": "Sul pole veel ühtegi veebilehte",
+      "desc": "Loo oma esimene AI-genereeritud leht sekunditega.",
+      "btn": "Loo veebileht"
+    },
+    "menu": {
+      "logs": "Saidi logid",
+      "delete": "Kustuta sait",
+      "stop": "Peata",
+      "start": "Jätka"
+    },
+    "card": {
+      "visit": "Külasta",
+      "deploy": "Avalda",
+      "edit": "Muuda",
+      "editMobile": "Ainult arvutis",
+      "editMobileTitle": "Muutmine on saadaval vaid töölaua vaates"
+    },
+    "modal": {
+      "logsTitle": "Konteineri logid (STD_OUT)"
+    },
+    "alerts": {
+      "connectingLogs": "Ühenduse loomine Dockeriga...",
+      "logsUnavailable": "Logid pole saadaval või konteiner ei tööta.",
+      "confirmDelete": "See kustutab saidi, failid ja konteineri JÄÄDAVALT.",
+      "deleteFailed": "Kustutamine ebaõnnestus.",
+      "confirmDeploy": "Kas käivitada avaldamise konteiner?",
+      "deployFailed": "Avaldamine ebaõnnestus.",
+      "confirmStop": "Kas olete kindel, et soovite selle projekti peatada?",
+      "confirmStart": "Kas olete kindel, et soovite seda projekti jätkata?",
+      "stopSuccess": "Projekt on edukalt peatatud.",
+      "startSuccess": "Projekt on edukalt jätkatud."
+    }
+  },
+  "domainManager": {
+    "title": "Domeenide haldamine",
+    "empty": "Sul pole veel domeene, mida hallata.",
+    "table": {
+      "projectName": "Projekti nimi",
+      "withoutName": "Nimetu",
+      "currentDomain": "Praegune domeen (URL)",
+      "status": "Staatus",
+      "attachCustom": "Lisa oma domeen",
+      "notDeployed": "Avaldamata",
+      "placeholder": "sinudomeen.ee",
+      "deployFirst": "Avalda esmalt"
+    },
+    "dns": {
+      "title": "DNS seadistamine",
+      "instruction": "Oma domeeni ühendamiseks looge oma registripidaja paneelis A-kirje järgmiste andmetega:"
+    },
+    "upgrade": {
+      "customDomains": "Oma domeeni lisamine on saadaval alates Starter paketist."
+    },
+    "status": {
+      "active": "Aktiivne",
+      "building": "Ehitamisel",
+      "pending": "Ootel",
+      "error": "Viga"
+    },
+    "buttons": {
+      "wait": "Oota...",
+      "set": "Seosta"
+    },
+    "alerts": {
+      "enterDomain": "Sisesta domeeni nimi",
+      "success": "✅ Domeen on edukalt aktiveeritud",
+      "error": "❌ Viga domeeni seadistamisel"
+    }
+  },
+  "leads": {
+    "title": "Sissetulnud",
+    "subtitle": "Päringud ja sõnumid",
+    "chooseWebsite": "Vali veebileht",
+    "withoutName": "Nimetu",
+    "loading": "Päringute laadimine...",
+    "noLeads": "Sellel lehel pole veel päringuid.",
+    "empty": {
+      "title": "Sul pole päringutega lehti",
+      "btn": "Loo veebileht"
+    },
+    "table": {
+      "date": "Kuupäev",
+      "status": "Staatus",
+      "new": "Uus"
+    },
+    "fields": {
+      "name": "Nimi",
+      "full_name": "Täispikk nimi",
+      "first_name": "Eesnimi",
+      "last_name": "Perekonnanimi",
+      "email": "E-post",
+      "email_address": "E-posti aadress",
+      "phone": "Telefon",
+      "phone_number": "Telefoninumber",
+      "message": "Sõnum",
+      "company": "Ettevõte",
+      "subject": "Teema"
+    },
+    "alerts": {
+      "errorProjects": "Viga projektide laadimisel",
+      "errorLeads": "Viga päringute laadimisel"
+    }
+  },
+  "products": {
+    "title": "Tootekataloog",
+    "subtitle": "Halda tooteid, tõlkeid ja nähtavust",
+    "chooseWebsite": "Vali veebileht",
+    "withoutName": "Nimetu",
+    "empty": {
+      "title": "Sul pole veel veebilehti",
+      "btn": "Loo veebileht"
+    },
+    "enable": {
+      "title": "Luba kataloogi funktsioonid",
+      "desc": "Sellel saidil pole veel kataloogi lehte. Aktiveeri see, et lisada tooteid või teenuseid.",
+      "loading": "Aktiveerimine...",
+      "btn": "Lisa kataloogi leht"
+    },
+    "header": {
+      "productsCount": "Toodet",
+      "deploying": "Avaldamine...",
+      "saveBtn": "Salvesta ja avalda",
+      "addBtn": "Lisa toode"
+    },
+    "card": {
+      "uploadImage": "Laadi pilt üles",
+      "changeImage": "Muuda",
+      "title": "Pealkiri",
+      "description": "Kirjeldus",
+      "price": "Hind",
+      "hideIn": "Peida keeltes (Enter)",
+      "hidePlaceholder": "nt. ru, ar...",
+      "images": "Pildid (Maks. 5)",
+      "categoryPlaceholder": "Sisesta kategooria"
+    },
+    "defaults": {
+      "newProduct": "Uus toode",
+      "general": "Üldine",
+      "catalog": "Kataloog"
+    },
+    "alerts": {
+      "uploadFailed": "Pildi üleslaadimine ebaõnnestus",
+      "saveSuccess": "Kataloog salvestatud ja sait avaldatud!",
+      "saveError": "Viga kataloogi salvestamisel või avaldamisel"
+    }
+  },
+  "waitingRoom": {
+    "title": "Konto ootel",
+    "message": "Sinu konto on loodud, kuid see vajab administraatori kinnitust. Palun kontrolli oma e-posti või oota aktiveerimist.",
+    "refreshBtn": "Värskenda staatust",
+    "logoutBtn": "Logi välja"
+  },
+  "settings": {
+    "title": "Konto seaded",
+    "subtitle": "Halda oma profiile"
+  },
+  "cookieBanner": {
+    "title": "Küpsiste seaded",
+    "description": "Kasutame vajalikke küpsiseid saidi toimimiseks. Parima kogemuse pakkumiseks soovime kasutada ka analüütilisi küpsiseid (GA4).",
+    "privacyLink": "Loe meie privaatsuspoliitikat",
+    "necessary": {
+      "title": "Rangelt vajalikud",
+      "desc": "Olulised platvormi toimimiseks. Neid ei saa välja lülitada."
+    },
+    "analytics": {
+      "title": "Analüütika (GA4)",
+      "desc": "Aitavad meil koguda anonüümseid andmeid saidi parandamiseks."
+    },
+    "buttons": {
+      "acceptAll": "Nõustu kõigiga",
+      "save": "Salvesta valik",
+      "reject": "Keeldu valikulistest"
+    }
+  },
+  "smtpSettings": {
+    "title": "SMTP seaded",
+    "subtitle": "Ühenda oma e-post, et saada vormide kaudu sõnumeid oma lehtedelt",
+    "labels": {
+      "host": "SMTP server (Host)",
+      "port": "Port",
+      "username": "Kasutaja / E-post",
+      "password": "Parool (Rakenduse parool)",
+      "fromEmail": "Saatja e-post (From)"
+    },
+    "placeholders": {
+      "host": "smtp.gmail.com",
+      "port": "465 või 587",
+      "username": "sinu@email.ee",
+      "password": "••••••••",
+      "fromEmail": "teavitused@sinudomeen.ee"
+    },
+    "recommendation": "Soovitame kasutada rakendusepõhiseid paroole",
+    "buttons": {
+      "saving": "Salvestamine...",
+      "save": "Salvesta profiil"
+    },
+    "alerts": {
+      "success": "✅ SMTP seaded on edukalt salvestatud!",
+      "error": "❌ Viga seadete salvestamisel."
+    }
+  },
+  "editSite": {
+    "sidebar": {
+      "title": "Redaktor",
+      "saveBtn": "Salvesta"
+    },
+    "tabs": {
+      "ai": {
+        "title": "AI Assistent",
+        "placeholder": "Muuda värve, tekste..."
+      },
+      "content": {
+        "title": "Sisu redigeerimine",
+        "featureItems": "Funktsioonide nimekiri",
+        "faqItems": "KKK nimekiri"
+      },
+      "design": {
+        "title": "Bränd ja fondid",
+        "typography": "Tüpograafia"
+      },
+      "business": {
+        "title": "Äri andmed",
+        "businessName": "Äri nimi",
+        "legalName": "Juriidiline nimi",
+        "email": "E-posti aadress",
+        "phone": "Telefon"
+      },
+      "socials": {
+        "title": "Sotsiaalmeedia"
+      },
+      "assets": {
+        "title": "Visuaalsed failid",
+        "image": "Pilt",
+        "processing": "Töötlemine...",
+        "aiRedraw": "AI uuendamine",
+        "upload": "Laadi üles",
+        "promptPlaceholder": "Kirjelda pilti, mida soovid tehisintellektil luua..."
+      },
+      "favicon": {
+        "title": "Favicon / Logo",
+        "aiLogo": "AI Logo",
+        "logoPromptPlaceholder": "Kirjelda oma logo (nt minimalistlik sinine lind)...",
+        "faviconPromptPlaceholder": "Kirjelda faviconi (nt lame rakenduse ikoon, täht T)..."
+      },
+      "structure": {
+        "title": "Lehe struktuur",
+        "addBtn": "Lisa",
+        "smtpWarning": "Päringuvormideks seadista SMTP seadetes."
+      },
+      "form": {
+        "title": "Vormi redaktor",
+        "show": "Näita",
+        "labelPlaceholder": "Silt"
+      }
+    },
+    "publish": {
+      "building": "Ehitamine...",
+      "publishBtn": "Avalda veebis",
+      "confirmTitle": "Kas avaldada veebisait?",
+      "confirmDesc": "Kas olete kindel, et soovite selle veebisaidi avaldada? See muutub seejärel internetis kättesaadavaks."
+    },
+    "toolbar": {
+      "hide": "Peida redaktor",
+      "show": "Näita redaktorit"
+    },
+    "props": {
+      "title": "Pealkiri",
+      "subtitle": "Alapealkiri",
+      "description": "Kirjeldus",
+      "cta_text": "Nupu tekst",
+      "cta_url": "Nupu link",
+      "address": "Aadress",
+      "phone": "Telefon",
+      "email": "E-post",
+      "submit_button_text": "Vormi nupu tekst",
+      "question": "Küsimus",
+      "answer": "Vastus"
+    },
+    "blocks": {
+      "hero": "Hero-päis",
+      "about": "Meist",
+      "features": "Funktsioonid",
+      "faq": "KKK",
+      "map": "Kaart",
+      "contacts": "Kontaktandmed",
+      "form": "Päringuvorm",
+      "smtpRequired": "(Vajab SMTP-d)",
+      "gallery": "Galerii"
+    },
+    "alerts": {
+      "errorLoad": "Viga projekti laadimisel.",
+      "deploySuccess": "Avaldamine õnnestus!",
+      "deployFail": "Avaldamine ebaõnnestus.",
+      "aiError": "AI redaktori viga",
+      "uploadFail": "Üleslaadimine ebaõnnestus",
+      "aiGenError": "AI genereerimise viga",
+      "smtpWarning": "Palun seadista seadetes SMTP, et kasutada vorme."
+    },
+    "defaults": {
+      "heroTitle": "Uus pealkiri",
+      "subtitle": "Alapealkiri",
+      "start": "Alusta",
+      "features": "Funktsioonid",
+      "fast": "Kiire",
+      "speed": "Kiirus",
+      "aboutUs": "Meist",
+      "established": "Loodud...",
+      "faq": "KKK",
+      "gallery": "Meie galerii",
+      "how": "Kuidas see töötab?",
+      "easy": "Väga lihtsalt.",
+      "findUs": "Leia meid",
+      "contact": "Kontakt",
+      "getInTouch": "Võta ühendust",
+      "sendMessage": "Saada meile sõnum",
+      "sendNow": "Saada kohe",
+      "yourName": "Sinu nimi",
+      "emailAddr": "E-posti aadress",
+      "phoneLabel": "Telefon",
+      "messageLabel": "Sõnum"
+    }
+  },
+  "app": {
+    "nav": {
+      "mySites": "Minu saidid",
+      "createNew": "Loo uus",
+      "domains": "Domeenid",
+      "leads": "Päringud",
+      "products": "Tooted",
+      "seo": "SEO",
+      "settings": "Seaded",
+      "logout": "Logi välja",
+      "usage": "Kasutus"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Lehte ei leitud",
+    "description": "Lehte, mida otsite, pole olemas või see on teisaldatud.",
+    "backBtn": "Tagasi avalehele"
+  },
+  "seo": {
+    "title": "SEO optimeerimine",
+    "subtitle": "Halda otsingumootorite metasilte või genereeri need tehisintellekti abil.",
+    "chooseWebsite": "Vali veebisait",
+    "unnamedProject": "Nimetu projekt",
+    "noProjects": "Projekte ei leitud",
+    "editingLanguage": "Redigeerimiskeel:",
+    "generating": "Genereerimine...",
+    "autoGenerate": "Automaatne AI genereerimine",
+    "deploying": "Avaldamine...",
+    "saveDeploy": "Salvesta ja avalda",
+    "metaTitle": "Meta pealkiri",
+    "titleRec": "Soovitatav: 50-60 tähemärki.",
+    "metaDesc": "Meta kirjeldus",
+    "descRec": "Soovitatav: 150-160 tähemärki.",
+    "keywords": "Märksõnad",
+    "keywordsRec": "Komadega eraldatud märksõnade loend.",
+    "alerts": {
+      "genFail": "AI SEO genereerimine ebaõnnestus.",
+      "saveSuccess": "SEO seaded salvestatud ja avaldatud!",
+      "saveError": "Viga SEO salvestamisel."
+    },
+    "upgrade": {
+      "aiGenerations": "AI SEO genereerimine on saadaval alates Starter paketist."
+    }
+  },
+  "userProfile": {
+    "title": "Kasutaja Profiil",
+    "subtitle": "Hallake oma isiklikke andmeid ja vaadake tellimuse üksikasju.",
+    "labels": {
+      "id": "Konto ID",
+      "email": "E-posti Aadress",
+      "fullName": "Täisnimi",
+      "tier": "Pakett",
+      "status": "Staatus",
+      "aiUsed": "AI Genereerimisi Kasutatud"
+    },
+    "placeholders": {
+      "fullName": "Sisestage oma täisnimi"
+    },
+    "buttons": {
+      "save": "Salvesta",
+      "saving": "Salvestamine..."
+    },
+    "alerts": {
+      "success": "Profiil edukalt uuendatud!",
+      "error": "Profiili uuendamine ebaõnnestus."
+    }
+  },
+  "usage": {
+    "title": "Kasutus ja Piirangud",
+    "subtitle": "Jälgige oma konto kasutust, piiranguid ja saadaolevaid funktsioone.",
+    "plan": {
+      "current": "Praegune Pakett"
+    },
+    "stats": {
+      "sites": "Aktiivsed Saidid",
+      "sitesDesc": "Loodud projektide arv teie paketi limiidist.",
+      "ai": "AI Genereerimised",
+      "aiDesc": "AI päringute ja loodud piltide koguarv."
+    },
+    "features": {
+      "title": "Saadaval Funktsioonid",
+      "domains": "Kohandatud Domeenid",
+      "leads": "Kontaktivormid",
+      "catalogs": "E-kaubanduse Kataloogid"
+    }
+  },
+  "modal": {
+    "cancel": "Tühista",
+    "confirm": "Kinnita",
+    "ok": "OK"
+  },
+  "upgradeModal": {
+    "title": "Vajalik on uuendus",
+    "unlockFeatures": "Avage funktsioonid:",
+    "features": {
+      "customDomains": "Kohandatud domeenid",
+      "aiGenerations": "AI genereerimised",
+      "leadForms": "Vormid (SMTP)",
+      "catalogs": "Tootekataloogid"
+    },
+    "upgradeTo": "Uuenda {tier} paketile"
+  },
+  "billing": {
+    "buttons": {
+      "upgrade": "Uuenda {tier} paketile",
+      "downgrade": "Alanda {tier} paketile",
+      "current": "Praegune pakett"
+    },
+    "currentPlan": "Praegune pakett:",
+    "usingLimits": "Te kasutate praegu {tier} paketi limiite.",
+    "freemium": {
+      "title": "Freemium",
+      "desc": "Ideaalne platvormi proovimiseks.",
+      "f1": "1 Veebisait",
+      "f2": "Ei kohandatud domeene",
+      "f3": "Ei vorme",
+      "f4": "Ei katalooge"
+    },
+    "starter": {
+      "badge": "Populaarseim",
+      "title": "Starter",
+      "desc": "Suurepärane väikeettevõtetele.",
+      "f1": "5 Veebisaiti",
+      "f2": "Kohandatud domeenid",
+      "f3": "Vormid (SMTP)",
+      "f4": "AI piltide loomine",
+      "f5": "Ei katalooge"
+    },
+    "pro": {
+      "title": "Pro",
+      "desc": "Kasvavatele agentuuridele ja poodidele.",
+      "f1": "10 Veebisaiti",
+      "f2": "Kohandatud domeenid",
+      "f3": "Vormid (SMTP)",
+      "f4": "AI piltide loomine",
+      "f5": "Tootekataloogid"
+    },
+    "buttons": {
+      "current": "Praegune pakett",
+      "downgrade": "Alanda {tier} paketile",
+      "upgrade": "Uuenda {tier} paketile"
+    },
+    "alerts": {
+      "cannotDowngradeTitle": "Paketi alandamine ebaõnnestus!",
+      "cannotDowngradeMsg": "Teil on praegu {sites} aktiivset saiti, kuid {tier} plaan lubab ainult {limit}.\n\nPalun peatage esmalt mõned saidid.",      "confirmDowngradeTitle": "Olete kindel?",
+      "confirmDowngradeMsg": "Kas olete kindel, et soovite alandada {tier} paketile?\n\nKaotate juurdepääsu tasulistele funktsioonidele. Veenduge, et olete need komponendid oma projektides keelanud.",
+      "redirectingTitle": "Ümbersuunamine",
+      "redirectingMsg": "Ümbersuunamine Stripe'i makseväravale {tier} paketi jaoks..."
+    }
+  },
+  "common": {
+    "alerts": {
+      "success": "Edu",
+      "error": "Viga",
+      "warning": "Hoiatus",
+      "info": "Info",
+      "confirm": "Kas oled kindel?",
+      "saveSuccess": "Edukalt salvestatud!",
+      "deleteSuccess": "Edukalt kustutatud!",
+      "deploySuccess": "Paigaldamine edukalt alustatud!",
+      "actionFailed": "Midagi läks valesti. Palun proovi uuesti.",
+      "loading": "Töötlemine..."
+    },
+    "buttons": {
+      "ok": "OK",
+      "cancel": "Tühista",
+      "confirm": "Kinnita",
+      "save": "Salvesta"
+    }
+  },
+  "support": {
+    "title": "Tugi ja Kontakt",
+    "subtitle": "Leidsid vea või on sul küsimus? Anna meile teada!",
+    "labels": {
+      "subject": "Teema / Probleemi tüüp",
+      "message": "Sinu sõnum",
+      "attachments": "Manused (Valikuline)"
+    },
+    "placeholders": {
+      "select": "Vali teema...",
+      "message": "Palun kirjelda oma probleemi üksikasjalikult..."
+    },
+    "buttons": {
+      "sending": "Saatmine...",
+      "send": "Saada sõnum"
+    },
+    "upload": {
+      "click": "Klõpsa üleslaadimiseks",
+      "drag": "või lohista ja kukuta",
+      "formats": "SVG, PNG, JPG või PDF (Maks. 5MB)"
+    },
+    "alerts": {
+      "fileLimitTitle": "Hoiatus",
+      "fileLimitMsg": "Saad üles laadida maksimaalselt 5 faili.",
+      "successTitle": "Edu",
+      "successMsg": "Sinu sõnum on edukalt saadetud!",
+      "errorTitle": "Viga",
+      "errorMsg": "Sõnumi saatmine ebaõnnestus. Palun proovi hiljem uuesti."
+    },
+    "topics": {
+      "question": "Üldine küsimus",
+      "bug": "Veateade",
+      "feature": "Funktsiooni taotlus",
+      "billing": "Arveldusprobleem",
+      "other": "Muu"
+    }
+  },
+  "languages": {
+    "en": "Inglise",
+    "es": "Hispaania",
+    "fr": "Prantsuse",
+    "de": "Saksa",
+    "it": "Itaalia",
+    "ru": "Vene",
+    "uk": "Ukraina",
+    "ee": "Eesti",
+    "ca": "Kataloonia"
+  }
+}

@@ -1,0 +1,781 @@
+{
+  "nav": {
+    "howItWorks": "Com funciona",
+    "features": "Característiques",
+    "blocks": "Blocs",
+    "pricing": "Preus",
+    "aboutUs": "Sobre nosaltres",
+    "contact": "Contacte",
+    "getStarted": "Començar",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Llança les teves idees més ràpid",
+    "titleLine1": "Construeix el futur",
+    "titleLine2": "amb un prompt",
+    "description": "TouchCraft uneix venedors, dissenyadors i desenvolupadors. Genera aplicacions reals amb codi net, previsualitzacions en viu i desplegament instantani. La teva imaginació és l'únic límit.",
+    "startFree": "Comença gratis",
+    "watchDemo": "Veure Demo"
+  },
+  "workflow": {
+    "subtitle": "Flux de treball",
+    "title": "3 passos fins a producció.",
+    "step1Title": "Descriu la teva visió",
+    "step1Desc": "Simplement escriu què vols construir. Explica a la nostra IA el teu negoci, preferències de color i seccions necessàries.",
+    "step2Title": "La IA genera el codi",
+    "step2Desc": "TouchCraft crea instantàniament una aplicació Vue.js, estructura el disseny, escriu els textos i genera imatges.",
+    "step3Title": "Desplega a l'instant",
+    "step3Desc": "Fes clic a publicar. Conteniditzem la teva app, configurem Nginx i la llançem en un domini en viu amb SSL en segons."
+  },
+  "features": {
+    "subtitle": "Tot el que necessites",
+    "title": "Del prompt a la producció.",
+    "description": "TouchCraft proporciona un ecosistema complet per generar, gestionar i escalar les teves aplicacions web sense escriure ni una sola línia de codi.",
+    "item1Title": "Generació per IA",
+    "item1Desc": "Genera llocs web complets en Vue.js a punt per a producció amb dissenys, textos i imatges a partir d'un sol prompt descriptiu.",
+    "item2Title": "Desplegament instantani",
+    "item2Desc": "El teu lloc es conteniditza automàticament amb Docker i es desplega amb SSL. Afegeix dominis personalitzats amb un clic.",
+    "item3Title": "Localització nativa",
+    "item3Desc": "Suport multilingüe integrat. La IA tradueix automàticament tot el teu lloc a fins a 7 idiomes amb rutes netes.",
+    "item4Title": "CRM i Leads integrats",
+    "item4Desc": "Captura dades de visitants a l'instant. Panell de gestió de leads integrat amb notificacions automàtiques per correu SMTP.",
+    "item5Title": "Catàleg dinàmic",
+    "item5Desc": "Crea aparadors de productes amb galeries d'imatges. Filtra la visibilitat dels productes segons l'idioma o regió de l'usuari.",
+    "item6Title": "Editor de xat IA",
+    "item6Desc": "Necessites canvis? Només demana-ho. El nostre assistent d'IA modifica colors, textos i estructura en temps real dins l'editor."
+  },
+  "blocks": {
+    "subtitle": "Blocs de construcció",
+    "title": "Tot el que necessites per construir.",
+    "description": "Barreja i combina seccions intel·ligents. La IA les omple automàticament amb contingut rellevant i imatges d'alta qualitat.",
+    "hero": "Secció Hero",
+    "features": "Característiques",
+    "aboutUs": "Sobre nosaltres",
+    "faq": "Preguntes freqüents",
+    "maps": "Google Maps",
+    "leadForms": "Formularis"
+  },
+  "about": {
+    "subtitle": "La nostra missió",
+    "title": "Democratitzant el desenvolupament web.",
+    "para1": "Vam construir TouchCraft perquè creiem que llançar un lloc web professional, ràpid i escalable no hauria de requerir un equip d'enginyers o setmanes de feina.",
+    "para2": "En combinar el poder dels models de llenguatge amb frameworks moderns com Vue.js i Docker, hem creat una plataforma on les idees es fan realitat a la velocitat del pensament.",
+    "stat1": "Més ràpid",
+    "stat2": "Personalitzable"
+  },
+  "pricing": {
+    "subtitle": "Preus",
+    "title": "Escala al teu ritme.",
+    "description": "Comença gratis, millora el pla quan necessitis dominis personalitzats, funcions d'e-commerce i més potència.",
+    "perMonthFirst": "/ primer mes",
+    "perMonth": "/ mes",
+    "mostPopular": "Més popular",
+    "startFreeTrial": "Comença la prova gratuïta",
+    "getStarted": "Començar",
+    "upgradePro": "Millorar a Pro",
+    "free": {
+      "name": "Freemium",
+      "desc": "Perfecte per provar les aigües i veure la màgia de la IA en acció.",
+      "feature1": "1 Lloc web inclòs",
+      "feature2": "Generació bàsica per IA",
+      "feature3": "Domini .touch-craft.com gratuït",
+      "feature4": "Sense dominis personalitzats",
+      "feature5": "Sense formularis de leads"
+    },
+    "starter": {
+      "name": "Starter",
+      "desc": "Per a autònoms i petites empreses que necessiten presència professional.",
+      "feature1": "Fins a 5 llocs web",
+      "feature2": "Dominis personalitzats (SSL inclòs)",
+      "feature3": "Generació d'imatges per IA",
+      "feature4": "Formularis i accés al CRM",
+      "feature5": "Sense catàleg de productes"
+    },
+    "pro": {
+      "name": "Pro",
+      "desc": "Per a agències i marques d'e-commerce en creixement.",
+      "feature1": "Fins a 10 llocs web",
+      "feature2": "Catàleg dinàmic de productes",
+      "feature3": "Traducció automàtica (Fins a 7 idiomes)",
+      "feature4": "Alertes per correu SMTP",
+      "feature5": "Suport prioritari"
+    }
+  },
+  "contact": {
+    "subtitle": "Posa't en contacte",
+    "title": "Llest per transformar el teu flux de feina?",
+    "description": "Deixa'ns un missatge i el nostre equip es posarà en contacte amb tu aviat.",
+    "nameLabel": "El teu nom",
+    "namePlaceholder": "Joan Pere",
+    "emailLabel": "Correu electrònic",
+    "emailPlaceholder": "joan@exemple.cat",
+    "messageLabel": "Missatge",
+    "messagePlaceholder": "Com et podem ajudar?",
+    "captchaQ": "Quant és",
+    "captchaError": "Resposta incorrecta. Torna-ho a provar.",
+    "sending": "Enviant missatge...",
+    "sendBtn": "Enviar missatge",
+    "successMsg": "Missatge enviat amb èxit! Ens posarem en contacte aviat.",
+    "errorMsg": "Error en enviar el missatge. Torna-ho a provar."
+  },
+  "footer": {
+    "description": "El constructor de llocs web d'IA definitiu. Genera, edita i desplega aplicacions reals en segons.",
+    "product": "Producte",
+    "company": "Empresa",
+    "privacy": "Política de privadesa",
+    "copyright": "© 2026 TouchCraft Inc. Tots els drets reservats."
+  },
+  "privacy": {
+    "backToHome": "Tornar a l'inici",
+    "title": "Política de privadesa",
+    "lastUpdated": "Última actualització",
+    "intro": "Benvingut a <strong>TouchCraft</strong>. Respectem la teva privadesa i estem compromesos a protegir les teves dades segons el <strong>Reglament General de Protecció de Dades (UE) 2016/679 (RGPD)</strong> i la <strong>LOPDGDD</strong> espanyola.",
+    "sec1": {
+      "title": "1. Identitat del responsable del tractament",
+      "entity": "Nom de l'entitat:",
+      "email": "Correu per a consultes de privadesa:"
+    },
+    "sec2": {
+      "title": "2. El nostre doble rol (Responsable vs. Encarregat)",
+      "desc": "A causa de la naturalesa de la nostra plataforma SaaS, actuem en dues capacitats diferents:",
+      "li1": "<strong>Com a responsable del tractament:</strong> Quan crees un compte o compres una subscripció. Decidim per què i com es tracten les dades.",
+      "li2": "<strong>Com a encarregat del tractament:</strong> Quan utilitzes TouchCraft per allotjar el teu web i recollir dades dels teus clients. En aquest cas, <strong>tu ets el responsable</strong> i nosaltres només les guardem."
+    },
+    "sec3": {
+      "title": "3. Quina informació recollim i per què",
+      "th1": "Tipus de dada",
+      "th2": "Finalitat del tractament",
+      "th3": "Base legal (RGPD Art. 6)",
+      "r1c1": "<strong>Dades del compte:</strong> Nom, correu, contrasenya.",
+      "r1c2": "Per crear i gestionar el teu compte.",
+      "r1c3": "Execució d'un contracte.",
+      "r2c1": "<strong>Dades d'ús i analítica:</strong> Adreça IP, dades de GA4.",
+      "r2c2": "Seguretat i anàlisi del trànsit per millorar la UI/UX.",
+      "r2c3": "Interès legítim i consentiment.",
+      "r3c1": "<strong>Prompts d'IA:</strong> Textos introduïts.",
+      "r3c2": "Per generar codi i imatges mitjançant IA.",
+      "r3c3": "Execució d'un contracte."
+    },
+    "sec4": {
+      "title": "4. Serveis de tercers i transferències",
+      "desc": "No venem les teves dades. Compartim les dades estrictament necessàries amb proveïdors de confiança:",
+      "li1": "<strong>Google LLC (Gemini i GA4):</strong> Generació per IA i analítica.",
+      "li2": "<strong>Auth0:</strong> Autenticació segura d'usuaris.",
+      "li3": "<strong>Proveïdors de núvol (ej. DigitalOcean):</strong> Allotjament de webs i bases de dades a Europa."
+    },
+    "sec5": {
+      "title": "5. Retenció de dades",
+      "desc": "Guardem les dades mentre el compte estigui actiu. Si demanes l'eliminació, les esborrarem en 30 dies, excepte obligacions legals (com factures, fins a 5 anys)."
+    },
+    "sec6": {
+      "title": "6. Els teus drets (Drets ARCO+)",
+      "desc": "Segons el RGPD i la LOPDGDD, tens els següents drets:",
+      "li1": "<strong>Accés:</strong> Demanar una còpia de les teves dades.",
+      "li2": "<strong>Rectificació:</strong> Corregir dades inexactes.",
+      "li3": "<strong>Supressió (Dret a l'oblit):</strong> Demanar l'eliminació de dades.",
+      "li4": "<strong>Limitació:</strong> Demanar que suspenguem el tractament.",
+      "li5": "<strong>Portabilitat:</strong> Rebre les dades en un format estructurat.",
+      "li6": "<strong>Retirar el consentiment:</strong> Revocar permisos de cookies o newsletters.",
+      "contact": "Per exercir-los, escriu-nos a"
+    },
+    "sec7": {
+      "title": "7. Dret a presentar una reclamació",
+      "desc": "Si creus que s'han vulnerat els teus drets, pots reclamar davant l'<strong>Agencia Española de Protección de Datos (AEPD)</strong>.",
+      "website": "Web:",
+      "address": "Adreça:"
+    },
+    "sec8": {
+      "title": "8. Política de cookies",
+      "desc": "Fem servir cookies essencials per a la sessió i opcionals per a l'analítica (GA4). Pots gestionar-les al bàner inferior."
+    }
+  },
+  "createSite": {
+    "title": "Configurar nou lloc web",
+    "labels": {
+      "businessName": "Nom del negoci",
+      "niche": "Nitxol",
+      "nichePlaceholder": "p.ex. Consultoria tecnològica",
+      "description": "Descripció (context per a la IA)",
+      "sections": "Seleccionar seccions",
+      "languages": "Idiomes",
+      "langSelectPlaceholder": "Selecciona l'idioma...",
+      "legal": "Detalls legals i de contacte",
+      "legalName": "Nom legal",
+      "taxId": "NIF / CIF / IVA",
+      "address": "Adreça física",
+      "phone": "Telèfon",
+      "email": "Correu de contacte"
+    },
+    "upgrade": {
+      "maxSites": "Heu assolit el nombre màxim de llocs web per al vostre pla.",
+      "leadForms": "Els formularis de contacte requereixen el pla Starter.",
+      "maxLanguagesPro": "Els llocs multiidioma requereixen el pla Pro."
+    },
+    "sections": {
+      "hero": "Hero",
+      "about": "Nosaltres",
+      "features": "Característiques",
+      "faq": "Preguntes",
+      "map": "Mapa",
+      "contacts": "Contactes",
+      "form": "Formulari",
+      "gallery": "Galeria"
+    },
+    "smtpWarning": "Configuració SMTP necessària per als formularis.",
+    "setupNow": "Configurar ara",
+    "buttons": {
+      "generating": "Generant lloc web...",
+      "generate": "Generar web amb IA"
+    },
+    "alerts": {
+      "reqNameNiche": "El nom i el nitxol són obligatoris.",
+      "reqLang": "Afegeix almenys un idioma.",
+      "genFailed": "Error en la generació.",
+      "maxLanguages": "Heu assolit el nombre màxim d'idiomes per al vostre pla actual."
+    }
+  },
+  "dashboard": {
+    "title": "Gestió de projectes",
+    "empty": {
+      "title": "Encara no tens cap web",
+      "desc": "Crea el teu primer lloc web amb IA en segons.",
+      "btn": "Crear un lloc web"
+    },
+    "menu": {
+      "logs": "Registres del lloc",
+      "delete": "Eliminar lloc",
+      "stop": "Aturar",
+      "start": "Reprendre"
+    },
+    "card": {
+      "visit": "Visitar",
+      "deploy": "Desplegar",
+      "edit": "Editar",
+      "editMobile": "Editar (Només PC)",
+      "editMobileTitle": "L'edició només està disponible en escriptori"
+    },
+    "modal": {
+      "logsTitle": "Registres STD_OUT del contenidor"
+    },
+    "alerts": {
+      "connectingLogs": "Connectant al dimoni de Docker...",
+      "logsUnavailable": "Registres no disponibles o el contenidor no corre.",
+      "confirmDelete": "Això eliminarà PERMANENTMENT el lloc, els fitxers i el contenidor Docker.",
+      "deleteFailed": "Error en eliminar.",
+      "confirmDeploy": "Llançar el contenidor de desplegament?",
+      "deployFailed": "Error en el desplegament.",
+      "confirmStop": "Estàs segur que vols aturar aquest projecte?",
+      "confirmStart": "Estàs segur que vols reprendre aquest projecte?",
+      "stopSuccess": "Projecte aturat amb èxit.",
+      "startSuccess": "Projecte reprès amb èxit."
+    }
+  },
+  "domainManager": {
+    "title": "Gestió de dominis",
+    "empty": "No tens llocs web per gestionar dominis.",
+    "table": {
+      "projectName": "Nom del projecte",
+      "withoutName": "Sense nom",
+      "currentDomain": "Domini actual (URL)",
+      "status": "Estat",
+      "attachCustom": "Vincular domini propi",
+      "notDeployed": "No desplegat",
+      "placeholder": "elteudomini.cat",
+      "deployFirst": "Desplega primer"
+    },
+    "dns": {
+      "title": "Configuració de DNS",
+      "instruction": "Per connectar el vostre domini personalitzat, creeu un registre A al panell del vostre registrador amb les dades següents:"
+    },
+    "upgrade": {
+      "customDomains": "Els dominis personalitzats només estan disponibles al pla Starter."
+    },
+    "status": {
+      "active": "Actiu",
+      "building": "Construint",
+      "pending": "Pendent",
+      "error": "Error"
+    },
+    "buttons": {
+      "wait": "Espera...",
+      "set": "Vincular"
+    },
+    "alerts": {
+      "enterDomain": "Introdueix el nom del domini",
+      "success": "✅ Domini activat amb èxit",
+      "error": "❌ Error en configurar el domini"
+    }
+  },
+  "leads": {
+    "title": "Bústia d'entrada",
+    "subtitle": "Leads i missatges",
+    "chooseWebsite": "Triar lloc web",
+    "withoutName": "Sense nom",
+    "loading": "Carregant leads...",
+    "noLeads": "Encara no hi ha leads per a aquest web.",
+    "empty": {
+      "title": "No tens cap web amb leads",
+      "btn": "Crear un lloc web"
+    },
+    "table": {
+      "date": "Data",
+      "status": "Estat",
+      "new": "Nou"
+    },
+    "fields": {
+      "name": "Nom",
+      "full_name": "Nom complet",
+      "first_name": "Nom",
+      "last_name": "Cognoms",
+      "email": "Correu electrònic",
+      "email_address": "Adreça de correu",
+      "phone": "Telèfon",
+      "phone_number": "Número de telèfon",
+      "message": "Missatge",
+      "company": "Empresa",
+      "subject": "Assumpte"
+    },
+    "alerts": {
+      "errorProjects": "Error en carregar projectes",
+      "errorLeads": "Error en carregar leads"
+    }
+  },
+  "products": {
+    "title": "Catàleg de productes",
+    "subtitle": "Gestiona articles, traduccions i visibilitat",
+    "chooseWebsite": "Triar lloc web",
+    "withoutName": "Sense nom",
+    "empty": {
+      "title": "Encara no tens cap web",
+      "btn": "Crear un lloc web"
+    },
+    "enable": {
+      "title": "Habilitar funcions del catàleg",
+      "desc": "Aquest web encara no té pàgina de catàleg. Activa-la per afegir productes o serveis.",
+      "loading": "Habilitant...",
+      "btn": "Afegir pàgina de catàleg"
+    },
+    "header": {
+      "productsCount": "Productes",
+      "deploying": "Desplegant...",
+      "saveBtn": "Guardar i desplegar",
+      "addBtn": "Afegir producte"
+    },
+    "card": {
+      "uploadImage": "Pujar imatge",
+      "changeImage": "Canviar",
+      "title": "Títol",
+      "description": "Descripció",
+      "price": "Preu",
+      "hideIn": "Amagar en (Enter)",
+      "hidePlaceholder": "p.ex. ar, tr...",
+      "images": "Imatges (Màx. 5)",
+      "categoryPlaceholder": "Introdueix la categoria"
+    },
+    "defaults": {
+      "newProduct": "Nou producte",
+      "general": "General",
+      "catalog": "Catàleg"
+    },
+    "alerts": {
+      "uploadFailed": "Error en pujar la imatge",
+      "saveSuccess": "Catàleg guardat i lloc desplegat amb èxit!",
+      "saveError": "Error en guardar o desplegar el catàleg"
+    }
+  },
+  "waitingRoom": {
+    "title": "Compte pendent",
+    "message": "El teu compte s'ha creat amb èxit, però requereix l'aprovació de l'administrador. Revisa el teu correu o espera l'activació manual.",
+    "refreshBtn": "Actualitzar estat",
+    "logoutBtn": "Tancar sessió"
+  },
+  "settings": {
+    "title": "Ajustos del compte",
+    "subtitle": "Gestiona els teus perfils"
+  },
+  "cookieBanner": {
+    "title": "Preferències de cookies",
+    "description": "Fem servir cookies essencials perquè el lloc funcioni i cookies opcionals de Google Analytics 4 (GA4) per millorar-lo.",
+    "privacyLink": "Llegeix la nostra Política de privadesa",
+    "necessary": {
+      "title": "Estrictament necessàries",
+      "desc": "Essencials per al funcionament. No es poden desactivar."
+    },
+    "analytics": {
+      "title": "Analítica (GA4)",
+      "desc": "Ens ajuden a millorar recollint dades anònimes."
+    },
+    "buttons": {
+      "acceptAll": "Acceptar totes",
+      "save": "Guardar selecció",
+      "reject": "Rebutjar opcionals"
+    }
+  },
+  "smtpSettings": {
+    "title": "Ajustos SMTP",
+    "subtitle": "Connecta el teu correu per rebre els formularis dels teus webs",
+    "labels": {
+      "host": "Servidor SMTP (Host)",
+      "port": "Port",
+      "username": "Usuari / Correu",
+      "password": "Contrasenya (D'aplicació)",
+      "fromEmail": "Remitent (From)"
+    },
+    "placeholders": {
+      "host": "smtp.gmail.com",
+      "port": "465 o 587",
+      "username": "elteu@correu.cat",
+      "password": "••••••••",
+      "fromEmail": "no-reply@elteudomini.cat"
+    },
+    "recommendation": "Recomanem fer servir contrasenyes d'aplicació",
+    "buttons": {
+      "saving": "Guardant...",
+      "save": "Guardar perfil"
+    },
+    "alerts": {
+      "success": "✅ Ajustos SMTP guardats amb èxit!",
+      "error": "❌ Error en guardar els ajustos."
+    }
+  },
+  "editSite": {
+    "sidebar": {
+      "title": "Personalitzador",
+      "saveBtn": "Guardar"
+    },
+    "tabs": {
+      "ai": {
+        "title": "Assistent d'IA",
+        "placeholder": "Canvia colors, edita textos..."
+      },
+      "content": {
+        "title": "Editor de contingut",
+        "featureItems": "Elements destacats",
+        "faqItems": "Llista de preguntes"
+      },
+      "design": {
+        "title": "Marca i fonts",
+        "typography": "Tipografia"
+      },
+      "business": {
+        "title": "Detalls del negoci",
+        "businessName": "Nom del negoci",
+        "legalName": "Nom legal",
+        "email": "Adreça de correu",
+        "phone": "Telèfon"
+      },
+      "socials": {
+        "title": "Xarxes socials"
+      },
+      "assets": {
+        "title": "Arxius visuals",
+        "image": "Imatge",
+        "processing": "Processant...",
+        "aiRedraw": "Regenerar amb IA",
+        "upload": "Pujar",
+        "promptPlaceholder": "Descriu la imatge que vols que la IA generi..."
+      },
+      "favicon": {
+        "title": "Favicon / Logotip",
+        "aiLogo": "Logo per IA",
+        "logoPromptPlaceholder": "Descriu el teu logotip (ex. ocell blau minimalista)...",
+        "faviconPromptPlaceholder": "Descriu el favicon (ex. icona plana, lletra T)..."
+      },
+      "structure": {
+        "title": "Estructura de la pàgina",
+        "addBtn": "Afegir",
+        "smtpWarning": "Configura l'SMTP per activar els formularis."
+      },
+      "form": {
+        "title": "Editor de formularis",
+        "show": "Mostrar",
+        "labelPlaceholder": "Etiqueta"
+      }
+    },
+    "publish": {
+      "building": "Construint...",
+      "publishBtn": "Publicar web",
+      "confirmTitle": "Publicar lloc web?",
+      "confirmDesc": "Estàs segur que vols publicar aquest lloc web? Estarà accessible en línia."
+    },
+    "toolbar": {
+      "hide": "Amagar editor",
+      "show": "Mostrar editor"
+    },
+    "props": {
+      "title": "Títol",
+      "subtitle": "Subtítol",
+      "description": "Descripció",
+      "cta_text": "Text del botó",
+      "cta_url": "Enllaç del botó",
+      "address": "Adreça",
+      "phone": "Telèfon",
+      "email": "Correu",
+      "submit_button_text": "Text del botó d'enviament",
+      "question": "Pregunta",
+      "answer": "Resposta"
+    },
+    "blocks": {
+      "hero": "Pantalla principal",
+      "about": "Nosaltres",
+      "features": "Característiques",
+      "faq": "Preguntes freqüents",
+      "map": "Mapa",
+      "contacts": "Contactes",
+      "form": "Formulari",
+      "smtpRequired": "(Requiere SMTP)",
+      "gallery": "Galeria"
+    },
+    "alerts": {
+      "errorLoad": "Error en carregar el projecte.",
+      "deploySuccess": "Desplegament amb èxit!",
+      "deployFail": "Error en el desplegament.",
+      "aiError": "Error de l'editor d'IA",
+      "uploadFail": "Error en la pujada",
+      "aiGenError": "Error de generació d'IA",
+      "smtpWarning": "Configura l'SMTP per fer servir formularis."
+    },
+    "defaults": {
+      "heroTitle": "Nou títol",
+      "subtitle": "Subtítol",
+      "start": "Començar",
+      "features": "Característiques",
+      "fast": "Ràpid",
+      "speed": "Velocitat",
+      "aboutUs": "Sobre nosaltres",
+      "established": "Establert...",
+      "faq": "Preguntes",
+      "gallery": "La nostra galeria",
+      "how": "Com funciona?",
+      "easy": "Molt fàcil.",
+      "findUs": "Troba'ns",
+      "contact": "Contacte",
+      "getInTouch": "Posa't en contacte",
+      "sendMessage": "Envia'ns un missatge",
+      "sendNow": "Enviar ara",
+      "yourName": "El teu nom",
+      "emailAddr": "Correu electrònic",
+      "phoneLabel": "Telèfon",
+      "messageLabel": "Missatge"
+    }
+  },
+  "app": {
+    "nav": {
+      "mySites": "Els meus webs",
+      "createNew": "Crear nou",
+      "domains": "Dominis",
+      "leads": "Leads",
+      "products": "Productes",
+      "seo": "SEO",
+      "settings": "Ajustos",
+      "logout": "Tancar sessió",
+      "usage": "Ús i Límits"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Pàgina no trobada",
+    "description": "La pàgina que busques no existeix o ha estat moguda.",
+    "backBtn": "Tornar a l'inici"
+  },
+  "seo": {
+    "title": "Optimització SEO",
+    "subtitle": "Gestiona les etiquetes meta per als motors de cerca o genera-les amb IA.",
+    "chooseWebsite": "Tria el lloc web",
+    "unnamedProject": "Projecte sense nom",
+    "noProjects": "No s'han trobat projectes",
+    "editingLanguage": "Idioma d'edició:",
+    "generating": "Generant...",
+    "autoGenerate": "Autogenerar amb IA",
+    "deploying": "Desplegant...",
+    "saveDeploy": "Desar i Desplegar",
+    "metaTitle": "Meta Títol",
+    "titleRec": "Recomanat: 50-60 caràcters.",
+    "metaDesc": "Meta Descripció",
+    "descRec": "Recomanat: 150-160 caràcters.",
+    "keywords": "Paraules clau",
+    "keywordsRec": "Llista de paraules clau separades per comes.",
+    "alerts": {
+      "genFail": "Error en generar SEO amb IA.",
+      "saveSuccess": "Configuració SEO desada i desplegada!",
+      "saveError": "Error en desar SEO."
+    },
+    "upgrade": {
+      "aiGenerations": "La generació de SEO per IA requereix el pla Starter."
+    }
+  },
+  "userProfile": {
+    "title": "Perfil d'Usuari",
+    "subtitle": "Gestioneu la vostra informació personal i detalls de la subscripció.",
+    "labels": {
+      "id": "ID de Compte",
+      "email": "Correu Electrònic",
+      "fullName": "Nom Complet",
+      "tier": "Pla",
+      "status": "Estat",
+      "aiUsed": "Generacions IA Utilitzades"
+    },
+    "placeholders": {
+      "fullName": "Introduïu el vostre nom complet"
+    },
+    "buttons": {
+      "save": "Desar",
+      "saving": "Desant..."
+    },
+    "alerts": {
+      "success": "Perfil actualitzat amb èxit!",
+      "error": "Error en actualitzar el perfil."
+    }
+  },
+  "usage": {
+    "title": "Ús i Límits",
+    "subtitle": "Superviseu l'ús del vostre compte, els límits i les funcions disponibles.",
+    "plan": {
+      "current": "Pla Actual"
+    },
+    "stats": {
+      "sites": "Llocs Actius",
+      "sitesDesc": "Nombre de projectes creats fora del vostre límit.",
+      "ai": "Generacions IA",
+      "aiDesc": "Quantitat total de consultes i imatges d'IA generades."
+    },
+    "features": {
+      "title": "Funcions Disponibles",
+      "domains": "Dominis Personalitzats",
+      "leads": "Formularis de Contacte",
+      "catalogs": "Catàlegs E-Commerce"
+    }
+  },
+  "modal": {
+    "cancel": "Cancel·lar",
+    "confirm": "Confirmar",
+    "ok": "D'acord"
+  },
+  "upgradeModal": {
+    "title": "Cal actualització",
+    "unlockFeatures": "Desbloquejar funcions:",
+    "features": {
+      "customDomains": "Dominis personalitzats",
+      "aiGenerations": "Generacions IA",
+      "leadForms": "Formularis (SMTP)",
+      "catalogs": "Catàlegs de productes"
+    },
+    "upgradeTo": "Millorar a {tier}"
+  },
+  "billing": {
+    "buttons": {
+      "upgrade": "Millorar a {tier}",
+      "downgrade": "Baixar a {tier}",
+      "current": "Pla actual"
+    },
+    "currentPlan": "Pla actual:",
+    "usingLimits": "Actualment utilitzeu els límits del pla {tier}.",
+    "freemium": {
+      "title": "Freemium",
+      "desc": "Perfecte per provar la plataforma.",
+      "f1": "1 Lloc web",
+      "f2": "Sense dominis",
+      "f3": "Sense formularis",
+      "f4": "Sense catàlegs"
+    },
+    "starter": {
+      "badge": "Més popular",
+      "title": "Starter",
+      "desc": "Genial per a petites empreses.",
+      "f1": "5 Llocs web",
+      "f2": "Dominis personalitzats",
+      "f3": "Formularis (SMTP)",
+      "f4": "Generació IA d'imatges",
+      "f5": "Sense catàlegs"
+    },
+    "pro": {
+      "title": "Pro",
+      "desc": "Per a agències i botigues en creixement.",
+      "f1": "10 Llocs web",
+      "f2": "Dominis personalitzats",
+      "f3": "Formularis (SMTP)",
+      "f4": "Generació IA d'imatges",
+      "f5": "Catàlegs de productes"
+    },
+    "buttons": {
+      "current": "Pla actual",
+      "downgrade": "Baixar a {tier}",
+      "upgrade": "Millorar a {tier}"
+    },
+    "alerts": {
+      "cannotDowngradeTitle": "No es pot canviar de pla!",
+      "cannotDowngradeMsg": "Actualment teniu {sites} llocs actius, però el pla {tier} només en permet {limit}.\n\nSi us plau, atureu alguns llocs primer.",      "confirmDowngradeTitle": "Esteu segur?",
+      "confirmDowngradeMsg": "Segur que voleu baixar al pla {tier}?\n\nPerdreu l'accés a les funcions prèmium. Assegureu-vos d'haver desactivat aquests components en els vostres projectes.",
+      "redirectingTitle": "Redirigint",
+      "redirectingMsg": "Redirigint a la passarel·la de pagament de Stripe per al pla {tier}..."
+    }
+  },
+  "common": {
+    "alerts": {
+      "success": "Èxit",
+      "error": "Error",
+      "warning": "Avís",
+      "info": "Informació",
+      "confirm": "Estàs segur?",
+      "saveSuccess": "Desat amb èxit!",
+      "deleteSuccess": "Eliminat amb èxit!",
+      "deploySuccess": "Desplegament iniciat amb èxit!",
+      "actionFailed": "Alguna cosa ha anat malament. Si us plau, torna-ho a provar.",
+      "loading": "Processant..."
+    },
+    "buttons": {
+      "ok": "D'acord",
+      "cancel": "Cancel·lar",
+      "confirm": "Confirmar",
+      "save": "Desar"
+    }
+  },
+  "support": {
+    "title": "Suport i Contacte",
+    "subtitle": "Has trobat un error o tens cap pregunta? Fes-nos-ho saber!",
+    "labels": {
+      "subject": "Tema / Tipus de problema",
+      "message": "El teu Missatge",
+      "attachments": "Arxius adjunts (Opcional)"
+    },
+    "placeholders": {
+      "select": "Selecciona un tema...",
+      "message": "Si us plau, descriu el teu problema amb detall..."
+    },
+    "buttons": {
+      "sending": "Enviant...",
+      "send": "Enviar Missatge"
+    },
+    "upload": {
+      "click": "Fes clic per pujar",
+      "drag": "o arrossega i deixa anar",
+      "formats": "SVG, PNG, JPG o PDF (Màx. 5MB)"
+    },
+    "alerts": {
+      "fileLimitTitle": "Advertència",
+      "fileLimitMsg": "Pots pujar un màxim de 5 arxius.",
+      "successTitle": "Èxit",
+      "successMsg": "El teu missatge s'ha enviat amb èxit!",
+      "errorTitle": "Error",
+      "errorMsg": "No s'ha pogut enviar el missatge. Si us plau, torna-ho a provar més tard."
+    },
+    "topics": {
+      "question": "Pregunta general",
+      "bug": "Informe d'error",
+      "feature": "Sol·licitud de funció",
+      "billing": "Problema de facturació",
+      "other": "Altre"
+    }
+  },
+  "languages": {
+    "en": "Anglès",
+    "es": "Espanyol",
+    "fr": "Francès",
+    "de": "Alemany",
+    "it": "Italià",
+    "ru": "Rus",
+    "uk": "Ucraïnès",
+    "ee": "Estonià",
+    "ca": "Català"
+  }
+}

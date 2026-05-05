@@ -1,0 +1,781 @@
+{
+  "nav": {
+    "howItWorks": "Cómo Funciona",
+    "features": "Características",
+    "blocks": "Bloques",
+    "pricing": "Precios",
+    "aboutUs": "Sobre Nosotros",
+    "contact": "Contacto",
+    "getStarted": "Empezar",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Lanza tus ideas más rápido",
+    "titleLine1": "Construye el futuro",
+    "titleLine2": "con un prompt",
+    "description": "TouchCraft une a especialistas en marketing, diseñadores y desarrolladores. Genera aplicaciones reales con código limpio, vistas previas en vivo y despliegue instantáneo. Tu imaginación es el único límite.",
+    "startFree": "Empieza gratis",
+    "watchDemo": "Ver Demo"
+  },
+  "workflow": {
+    "subtitle": "Flujo de trabajo",
+    "title": "3 pasos hasta producción.",
+    "step1Title": "Describe tu visión",
+    "step1Desc": "Simplemente escribe lo que quieres construir. Cuéntale a nuestra IA sobre tu negocio, preferencias de color y secciones requeridas.",
+    "step2Title": "La IA genera el código",
+    "step2Desc": "TouchCraft crea instantáneamente una aplicación Vue.js, estructura el diseño, escribe el texto y genera imágenes.",
+    "step3Title": "Despliega al instante",
+    "step3Desc": "Haz clic en publicar. Contenedorizamos tu app, configuramos Nginx y la lanzamos en un dominio en vivo con SSL en segundos."
+  },
+  "features": {
+    "subtitle": "Todo lo que necesitas",
+    "title": "Del prompt a la producción.",
+    "description": "TouchCraft proporciona un ecosistema completo para generar, gestionar y escalar tus aplicaciones web sin escribir una sola línea de código.",
+    "item1Title": "Generación por IA",
+    "item1Desc": "Genera sitios web completos en Vue.js listos para producción con diseños, textos e imágenes a partir de un solo prompt descriptivo.",
+    "item2Title": "Despliegue Instantáneo",
+    "item2Desc": "Tu sitio se contenedoriza automáticamente con Docker y se despliega con SSL. Adjunta dominios personalizados con un clic.",
+    "item3Title": "Localización Nativa",
+    "item3Desc": "Soporte multilingüe integrado. La IA traduce automáticamente todo tu sitio a hasta 7 idiomas con enrutamiento limpio.",
+    "item4Title": "CRM y Leads Integrados",
+    "item4Desc": "Captura datos de visitantes al instante. Panel de gestión de leads integrado con notificaciones automáticas por correo SMTP.",
+    "item5Title": "Catálogo Dinámico",
+    "item5Desc": "Crea vitrinas de productos con galerías de imágenes. Filtra la visibilidad de los productos según el idioma o región del usuario dinámicamente.",
+    "item6Title": "Editor de Chat IA",
+    "item6Desc": "¿Necesitas cambios? Solo pídelo. Nuestro asistente de IA modifica colores, textos y estructura en tiempo real dentro del editor visual."
+  },
+  "blocks": {
+    "subtitle": "Bloques de Construcción",
+    "title": "Todo lo que necesitas para construir.",
+    "description": "Mezcla y combina secciones inteligentes. La IA las llena automáticamente con contenido relevante e imágenes de alta calidad.",
+    "hero": "Sección Hero",
+    "features": "Características",
+    "aboutUs": "Sobre Nosotros",
+    "faq": "Preguntas Frecuentes",
+    "maps": "Google Maps",
+    "leadForms": "Formularios"
+  },
+  "about": {
+    "subtitle": "Nuestra Misión",
+    "title": "Democratizando el Desarrollo Web.",
+    "para1": "Construimos TouchCraft porque creemos que lanzar un sitio web profesional, rápido y escalable no debería requerir un equipo de ingenieros o semanas de idas y venidas.",
+    "para2": "Al combinar el poder de los Grandes Modelos de Lenguaje con frameworks modernos como Vue.js y Docker, hemos creado una plataforma donde tus ideas se hacen realidad a la velocidad del pensamiento.",
+    "stat1": "Más rápido",
+    "stat2": "Personalizable"
+  },
+  "pricing": {
+    "subtitle": "Precios",
+    "title": "Escala a tu propio ritmo.",
+    "description": "Empieza gratis, mejora tu plan cuando necesites dominios personalizados, funciones de comercio electrónico y más poder.",
+    "perMonthFirst": "/ primer mes",
+    "perMonth": "/ mes",
+    "mostPopular": "Más Popular",
+    "startFreeTrial": "Iniciar Prueba Gratuita",
+    "getStarted": "Empezar",
+    "upgradePro": "Mejorar a Pro",
+    "free": {
+      "name": "Freemium",
+      "desc": "Perfecto para probar las aguas y ver la magia de la IA en acción.",
+      "feature1": "1 Sitio web incluido",
+      "feature2": "Generación básica por IA",
+      "feature3": "Dominio gratuito .touch-craft.com",
+      "feature4": "Sin dominios personalizados",
+      "feature5": "Sin formularios de leads"
+    },
+    "starter": {
+      "name": "Starter",
+      "desc": "Para freelancers y pequeñas empresas que necesitan presencia profesional.",
+      "feature1": "Hasta 5 Sitios web",
+      "feature2": "Dominios personalizados (SSL incluido)",
+      "feature3": "Generación de imágenes por IA",
+      "feature4": "Formularios y acceso a CRM",
+      "feature5": "Sin catálogo de productos"
+    },
+    "pro": {
+      "name": "Pro",
+      "desc": "Para agencias y marcas de comercio electrónico en crecimiento.",
+      "feature1": "Hasta 10 Sitios web",
+      "feature2": "Catálogo Dinámico de Productos",
+      "feature3": "Traducción automática (Hasta 7 idiomas)",
+      "feature4": "Alertas por correo SMTP",
+      "feature5": "Soporte Prioritario"
+    }
+  },
+  "contact": {
+    "subtitle": "Ponte en contacto",
+    "title": "¿Listo para transformar tu flujo de trabajo?",
+    "description": "Déjanos un mensaje y nuestro equipo se pondrá en contacto contigo en breve.",
+    "nameLabel": "Tu Nombre",
+    "namePlaceholder": "Juan Pérez",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "juan@ejemplo.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿En qué podemos ayudarte?",
+    "captchaQ": "¿Cuánto es",
+    "captchaError": "Respuesta incorrecta. Por favor, inténtalo de nuevo.",
+    "sending": "Enviando mensaje...",
+    "sendBtn": "Enviar Mensaje",
+    "successMsg": "¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.",
+    "errorMsg": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+  },
+  "footer": {
+    "description": "El creador de sitios web de IA definitivo. Genera, edita y despliega aplicaciones listas para producción en segundos.",
+    "product": "Producto",
+    "company": "Compañía",
+    "privacy": "Política de Privacidad",
+    "copyright": "© 2026 TouchCraft Inc. Todos los derechos reservados."
+  },
+  "privacy": {
+    "backToHome": "Volver al Inicio",
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "intro": "Bienvenido a <strong>TouchCraft</strong>. Respetamos tu privacidad y estamos comprometidos a proteger tus datos personales de acuerdo con el <strong>Reglamento General de Protección de Datos (UE) 2016/679 (RGPD)</strong> y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (<strong>LOPDGDD</strong>).",
+    "sec1": {
+      "title": "1. Identidad del Responsable del Tratamiento",
+      "entity": "Nombre de la Entidad:",
+      "email": "Correo electrónico para consultas de privacidad:"
+    },
+    "sec2": {
+      "title": "2. Nuestro Doble Rol (Responsable vs. Encargado)",
+      "desc": "Debido a la naturaleza de nuestra plataforma SaaS, actuamos en dos capacidades diferentes:",
+      "li1": "<strong>Como Responsable del Tratamiento:</strong> Cuando tú (el usuario) creas una cuenta, compras una suscripción o contactas a nuestro soporte. Nosotros decidimos por qué y cómo se procesan tus datos.",
+      "li2": "<strong>Como Encargado del Tratamiento:</strong> Cuando utilizas TouchCraft para alojar tu sitio web y recopilar información de tus propios clientes. En este caso, <strong>tú eres el Responsable</strong> de los datos de tus clientes, y nosotros simplemente los almacenamos en tu nombre."
+    },
+    "sec3": {
+      "title": "3. Qué Información Recopilamos y Por Qué",
+      "th1": "Tipo de Dato",
+      "th2": "Propósito del Tratamiento",
+      "th3": "Base Legal (RGPD Art. 6)",
+      "r1c1": "<strong>Datos de Cuenta:</strong> Nombre, Correo, Contraseña.",
+      "r1c2": "Para crear y gestionar tu cuenta.",
+      "r1c3": "Ejecución de un Contrato.",
+      "r2c1": "<strong>Datos de Uso y Analíticas:</strong> Dirección IP, datos de GA4.",
+      "r2c2": "Para garantizar la seguridad y analizar el tráfico.",
+      "r2c3": "Interés Legítimo y Consentimiento.",
+      "r3c1": "<strong>Prompts de IA:</strong> Textos ingresados.",
+      "r3c2": "Para generar código e imágenes vía IA.",
+      "r3c3": "Ejecución de un Contrato."
+    },
+    "sec4": {
+      "title": "4. Servicios de Terceros y Transferencias Internacionales",
+      "desc": "No vendemos tus datos personales. Sin embargo, compartimos datos estrictamente necesarios con proveedores de confianza:",
+      "li1": "<strong>Google LLC (API de Gemini y GA4):</strong> Utilizado para generación por IA y analíticas. Los datos pueden transferirse a EE. UU. bajo Cláusulas Contractuales Tipo (SCC).",
+      "li2": "<strong>Auth0:</strong> Autenticación segura y gestión de inicio de sesión.",
+      "li3": "<strong>Proveedores de Nube (ej. DigitalOcean / AWS):</strong> Alojamiento de sitios web y bases de datos dentro de Europa."
+    },
+    "sec5": {
+      "title": "5. Retención de Datos",
+      "desc": "Retenemos tus datos solo mientras tu cuenta esté activa. Si solicitas la eliminación, borraremos tus datos en un plazo de 30 días, excepto la información legalmente requerida (ej. facturas fiscales en España hasta 5 años)."
+    },
+    "sec6": {
+      "title": "6. Tus Derechos (Derechos ARCO+)",
+      "desc": "Bajo el RGPD y la LOPDGDD, tienes los siguientes derechos:",
+      "li1": "<strong>Acceso:</strong> Solicitar una copia de tus datos.",
+      "li2": "<strong>Rectificación:</strong> Corregir datos inexactos.",
+      "li3": "<strong>Supresión (Derecho al Olvido):</strong> Solicitar la eliminación de tus datos.",
+      "li4": "<strong>Limitación:</strong> Pedir que suspendamos el tratamiento.",
+      "li5": "<strong>Portabilidad:</strong> Recibir tus datos en un formato estructurado.",
+      "li6": "<strong>Retirar Consentimiento:</strong> Revocar tu consentimiento para cookies no esenciales.",
+      "contact": "Para ejercer estos derechos, envíanos un correo a"
+    },
+    "sec7": {
+      "title": "7. Derecho a Presentar una Reclamación",
+      "desc": "Si crees que se han vulnerado tus derechos, puedes presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>.",
+      "website": "Sitio web:",
+      "address": "Dirección:"
+    },
+    "sec8": {
+      "title": "8. Política de Cookies",
+      "desc": "Utilizamos cookies esenciales para mantener sesiones y cookies analíticas opcionales (GA4). Puedes gestionar tus preferencias en cualquier momento utilizando el banner de configuración de Cookies."
+    }
+  },
+  "createSite": {
+    "title": "Configurar Nuevo Sitio",
+    "labels": {
+      "businessName": "Nombre del Negocio",
+      "niche": "Nicho",
+      "nichePlaceholder": "ej. Consultoría Tecnológica",
+      "description": "Descripción (contexto para IA)",
+      "sections": "Seleccionar Secciones",
+      "languages": "Idiomas",
+      "langSelectPlaceholder": "Seleccionar idioma...",
+      "legal": "Detalles Legales y de Contacto",
+      "legalName": "Nombre Legal",
+      "taxId": "NIF / CIF / IVA",
+      "address": "Dirección Física",
+      "phone": "Número de Teléfono",
+      "email": "Correo de Contacto"
+    },
+    "upgrade": {
+      "maxSites": "Has alcanzado el número máximo de sitios web para tu plan.",
+      "leadForms": "Los formularios de contacto requieren el plan Starter.",
+      "maxLanguagesPro": "Los sitios multi-idioma requieren el plan Pro."
+    },
+    "sections": {
+      "hero": "Hero",
+      "about": "Nosotros",
+      "features": "Características",
+      "faq": "Preguntas",
+      "map": "Mapa",
+      "contacts": "Contactos",
+      "form": "Formulario",
+      "gallery": "Galería"
+    },
+    "smtpWarning": "Configuración SMTP requerida para Formularios.",
+    "setupNow": "Configurar ahora",
+    "buttons": {
+      "generating": "Generando Sitio Web...",
+      "generate": "Generar Sitio con IA"
+    },
+    "alerts": {
+      "reqNameNiche": "El Nombre y el Nicho son obligatorios.",
+      "reqLang": "Por favor, añade al menos un idioma.",
+      "genFailed": "Error en la generación.",
+      "maxLanguages": "Has alcanzado el número máximo de idiomas para tu plan actual."
+    }
+  },
+  "dashboard": {
+    "title": "Gestión de Proyectos",
+    "empty": {
+      "title": "Aún no tienes ningún sitio web",
+      "desc": "Crea tu primer sitio web generado por IA en segundos.",
+      "btn": "Crear un Sitio Web"
+    },
+    "menu": {
+      "logs": "Registros del Sitio",
+      "delete": "Eliminar Sitio",
+      "stop": "Detener",
+      "start": "Reanudar"
+    },
+    "card": {
+      "visit": "Visitar",
+      "deploy": "Desplegar",
+      "edit": "Editar",
+      "editMobile": "Editar (Solo PC)",
+      "editMobileTitle": "La edición solo está disponible en escritorio"
+    },
+    "modal": {
+      "logsTitle": "Registros STD_OUT del contenedor"
+    },
+    "alerts": {
+      "connectingLogs": "Conectando al demonio de Docker...",
+      "logsUnavailable": "Registros no disponibles o el contenedor no se está ejecutando.",
+      "confirmDelete": "Esto eliminará PERMANENTEMENTE el sitio, los archivos y el contenedor Docker.",
+      "deleteFailed": "Error al eliminar.",
+      "confirmDeploy": "¿Iniciar el contenedor de despliegue?",
+      "deployFailed": "Error al desplegar.",
+      "confirmStop": "¿Estás seguro de que quieres detener este proyecto?",
+      "confirmStart": "¿Estás seguro de que quieres reanudar este proyecto?",
+      "stopSuccess": "Proyecto detenido con éxito.",
+      "startSuccess": "Proyecto reanudado con éxito."
+    }
+  },
+  "domainManager": {
+    "title": "Gestión de Dominios",
+    "empty": "No tienes sitios web para gestionar dominios.",
+    "table": {
+      "projectName": "Nombre del Proyecto",
+      "withoutName": "Sin nombre",
+      "currentDomain": "Dominio Actual (URL)",
+      "status": "Estado",
+      "attachCustom": "Añadir Dominio Personalizado",
+      "notDeployed": "No desplegado",
+      "placeholder": "tudominio.com",
+      "deployFirst": "Desplegar primero"
+    },
+    "dns": {
+      "title": "Configuración de DNS",
+      "instruction": "Para conectar su dominio personalizado, cree un registro A en el panel de su registrador con los siguientes datos:"
+    },
+    "upgrade": {
+      "customDomains": "Los dominios personalizados solo están disponibles en el plan Starter."
+    },
+    "status": {
+      "active": "Activo",
+      "building": "Construyendo",
+      "pending": "Pendiente",
+      "error": "Error"
+    },
+    "buttons": {
+      "wait": "Espera...",
+      "set": "Vincular"
+    },
+    "alerts": {
+      "enterDomain": "Introduce el nombre del dominio",
+      "success": "✅ Dominio activado con éxito",
+      "error": "❌ Error al configurar el dominio"
+    }
+  },
+  "leads": {
+    "title": "Bandeja de entrada",
+    "subtitle": "Leads y Mensajes",
+    "chooseWebsite": "Elegir sitio web",
+    "withoutName": "Sin nombre",
+    "loading": "Cargando Leads...",
+    "noLeads": "Aún no hay leads para este sitio web.",
+    "empty": {
+      "title": "No tienes ningún sitio con Leads",
+      "btn": "Crear un Sitio Web"
+    },
+    "table": {
+      "date": "Fecha",
+      "status": "Estado",
+      "new": "Nuevo"
+    },
+    "fields": {
+      "name": "Nombre",
+      "full_name": "Nombre Completo",
+      "first_name": "Nombre",
+      "last_name": "Apellidos",
+      "email": "Correo Electrónico",
+      "email_address": "Dirección de Correo",
+      "phone": "Teléfono",
+      "phone_number": "Número de Teléfono",
+      "message": "Mensaje",
+      "company": "Empresa",
+      "subject": "Asunto"
+    },
+    "alerts": {
+      "errorProjects": "Error al cargar proyectos",
+      "errorLeads": "Error al cargar leads"
+    }
+  },
+  "products": {
+    "title": "Catálogo de Productos",
+    "subtitle": "Gestiona artículos, traducciones y oculta por idioma",
+    "chooseWebsite": "Elegir sitio web",
+    "withoutName": "Sin nombre",
+    "empty": {
+      "title": "Aún no tienes ningún sitio web",
+      "btn": "Crear un Sitio Web"
+    },
+    "enable": {
+      "title": "Habilitar Funciones del Catálogo",
+      "desc": "Este sitio web aún no tiene una página de catálogo. Actívala para empezar a añadir productos, menús o servicios.",
+      "loading": "Habilitando...",
+      "btn": "Añadir Página de Catálogo"
+    },
+    "header": {
+      "productsCount": "Productos",
+      "deploying": "Desplegando...",
+      "saveBtn": "Guardar y Desplegar",
+      "addBtn": "Añadir Producto"
+    },
+    "card": {
+      "uploadImage": "Subir Imagen",
+      "changeImage": "Cambiar",
+      "title": "Título",
+      "description": "Descripción",
+      "price": "Precio",
+      "hideIn": "Ocultar en (Enter)",
+      "hidePlaceholder": "ej. ar, tr...",
+      "images": "Imágenes (Máx. 5)",
+      "categoryPlaceholder": "Introduce la categoría"
+    },
+    "defaults": {
+      "newProduct": "Nuevo Producto",
+      "general": "General",
+      "catalog": "Catálogo"
+    },
+    "alerts": {
+      "uploadFailed": "Error al subir la imagen",
+      "saveSuccess": "¡Catálogo guardado y sitio desplegado con éxito!",
+      "saveError": "Error al guardar o desplegar el catálogo"
+    }
+  },
+  "waitingRoom": {
+    "title": "Cuenta Pendiente",
+    "message": "Tu cuenta ha sido creada con éxito, pero requiere la aprobación del administrador. Por favor, revisa tu correo electrónico para las instrucciones de activación o espera la aprobación manual.",
+    "refreshBtn": "Actualizar Estado",
+    "logoutBtn": "Cerrar Sesión"
+  },
+  "settings": {
+    "title": "Configuración de la Cuenta",
+    "subtitle": "Gestiona tus perfiles"
+  },
+  "cookieBanner": {
+    "title": "Preferencias de Cookies",
+    "description": "Utilizamos cookies estrictamente necesarias para que nuestro sitio funcione. También nos gustaría establecer cookies opcionales de Google Analytics 4 (GA4) para ayudarnos a mejorarlo.",
+    "privacyLink": "Lee nuestra Política de Privacidad",
+    "necessary": {
+      "title": "Estrictamente Necesarias",
+      "desc": "Esenciales para que la plataforma funcione. No se pueden desactivar."
+    },
+    "analytics": {
+      "title": "Analíticas (GA4)",
+      "desc": "Ayúdanos a mejorar recopilando datos anónimos."
+    },
+    "buttons": {
+      "acceptAll": "Aceptar Todas",
+      "save": "Guardar Opciones",
+      "reject": "Rechazar Opcionales"
+    }
+  },
+  "smtpSettings": {
+    "title": "Configuración SMTP",
+    "subtitle": "Conecta tu correo para recibir los envíos de formularios de tus sitios web",
+    "labels": {
+      "host": "Servidor SMTP (Host)",
+      "port": "Puerto",
+      "username": "Usuario / Correo",
+      "password": "Contraseña (Contraseña de Aplicación)",
+      "fromEmail": "Correo del Remitente (De)"
+    },
+    "placeholders": {
+      "host": "smtp.gmail.com",
+      "port": "465 o 587",
+      "username": "tu@correo.com",
+      "password": "••••••••",
+      "fromEmail": "noreply@midominio.com"
+    },
+    "recommendation": "Recomendamos usar Contraseñas de Aplicación",
+    "buttons": {
+      "saving": "Guardando...",
+      "save": "Guardar Perfil"
+    },
+    "alerts": {
+      "success": "✅ ¡Configuración SMTP guardada con éxito!",
+      "error": "❌ Error al guardar la configuración."
+    }
+  },
+  "editSite": {
+    "sidebar": {
+      "title": "Editor",
+      "saveBtn": "Guardar"
+    },
+    "tabs": {
+      "ai": {
+        "title": "Asistente de IA",
+        "placeholder": "Cambiar colores, editar textos..."
+      },
+      "content": {
+        "title": "Editor de Contenido",
+        "featureItems": "Elementos Destacados",
+        "faqItems": "Preguntas Frecuentes"
+      },
+      "design": {
+        "title": "Colores y Fuentes",
+        "typography": "Tipografía"
+      },
+      "business": {
+        "title": "Detalles del Negocio",
+        "businessName": "Nombre del Negocio",
+        "legalName": "Nombre Legal",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono"
+      },
+      "socials": {
+        "title": "Redes Sociales"
+      },
+      "assets": {
+        "title": "Archivos Multimedia",
+        "image": "Imagen",
+        "processing": "Procesando...",
+        "aiRedraw": "Generar con IA",
+        "upload": "Subir",
+        "promptPlaceholder": "Describe la imagen que quieres que la IA genere..."
+      },
+      "favicon": {
+        "title": "Favicon / Logo",
+        "aiLogo": "Logo por IA",
+        "logoPromptPlaceholder": "Describe tu logo (ej. pájaro azul minimalista)...",
+        "faviconPromptPlaceholder": "Describe el favicon (ej. icono plano, letra T)..."
+      },
+      "structure": {
+        "title": "Estructura de la Página",
+        "addBtn": "Añadir",
+        "smtpWarning": "Configura SMTP en Ajustes para habilitar Formularios."
+      },
+      "form": {
+        "title": "Editor de Formularios",
+        "show": "Mostrar",
+        "labelPlaceholder": "Etiqueta"
+      }
+    },
+    "publish": {
+      "building": "Construyendo...",
+      "publishBtn": "Publicar en vivo",
+      "confirmTitle": "¿Publicar sitio web?",
+      "confirmDesc": "¿Estás seguro de que deseas publicar este sitio web? Estará disponible en línea."
+    },
+    "toolbar": {
+      "hide": "Ocultar Editor",
+      "show": "Mostrar Editor"
+    },
+    "props": {
+      "title": "Título",
+      "subtitle": "Subtítulo",
+      "description": "Descripción",
+      "cta_text": "Texto del Botón",
+      "cta_url": "Enlace del botón",
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "email": "Correo",
+      "submit_button_text": "Botón de Enviar",
+      "question": "Pregunta",
+      "answer": "Respuesta"
+    },
+    "blocks": {
+      "hero": "Pantalla Principal",
+      "about": "Sobre Nosotros",
+      "features": "Características",
+      "faq": "Preguntas Frecuentes",
+      "map": "Mapa",
+      "contacts": "Contactos",
+      "form": "Formulario",
+      "smtpRequired": "(Requiere SMTP)",
+      "gallery": "Galería"
+    },
+    "alerts": {
+      "errorLoad": "Error al cargar el proyecto.",
+      "deploySuccess": "¡Despliegue exitoso!",
+      "deployFail": "Error al desplegar.",
+      "aiError": "Error del Editor de IA",
+      "uploadFail": "Error al subir",
+      "aiGenError": "Error de Generación por IA",
+      "smtpWarning": "Por favor, configura SMTP en los Ajustes para usar formularios."
+    },
+    "defaults": {
+      "heroTitle": "Nuevo Título",
+      "subtitle": "Subtítulo",
+      "start": "Empezar",
+      "features": "Características",
+      "fast": "Rápido",
+      "speed": "Velocidad",
+      "aboutUs": "Sobre Nosotros",
+      "established": "Establecido...",
+      "faq": "Preguntas",
+      "gallery": "Nuestra galería",
+      "how": "¿Cómo funciona?",
+      "easy": "Muy fácil.",
+      "findUs": "Encuéntranos",
+      "contact": "Contacto",
+      "getInTouch": "Ponte en contacto",
+      "sendMessage": "Envíanos un mensaje",
+      "sendNow": "Enviar ahora",
+      "yourName": "Tu Nombre",
+      "emailAddr": "Correo Electrónico",
+      "phoneLabel": "Teléfono",
+      "messageLabel": "Mensaje"
+    }
+  },
+  "app": {
+    "nav": {
+      "mySites": "Mis Sitios",
+      "createNew": "Crear Nuevo",
+      "domains": "Dominios",
+      "leads": "Leads",
+      "products": "Productos",
+      "seo": "SEO",
+      "settings": "Ajustes",
+      "logout": "Cerrar Sesión",
+      "usage": "Uso y Límites"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "backBtn": "Volver al inicio"
+  },
+  "seo": {
+    "title": "Optimización SEO",
+    "subtitle": "Gestiona las etiquetas meta para los motores de búsqueda o genéralas con IA.",
+    "chooseWebsite": "Elegir sitio web",
+    "unnamedProject": "Proyecto sin nombre",
+    "noProjects": "No se encontraron proyectos",
+    "editingLanguage": "Idioma de edición:",
+    "generating": "Generando...",
+    "autoGenerate": "Autogenerar con IA",
+    "deploying": "Desplegando...",
+    "saveDeploy": "Guardar y Desplegar",
+    "metaTitle": "Meta Título",
+    "titleRec": "Recomendado: 50-60 caracteres.",
+    "metaDesc": "Meta Descripción",
+    "descRec": "Recomendado: 150-160 caracteres.",
+    "keywords": "Palabras clave",
+    "keywordsRec": "Lista de palabras clave separadas por comas.",
+    "alerts": {
+      "genFail": "Error al generar SEO con IA.",
+      "saveSuccess": "¡Configuración SEO guardada y desplegada!",
+      "saveError": "Error al guardar SEO."
+    },
+    "upgrade": {
+      "aiGenerations": "La generación de SEO por IA requiere el plan Starter."
+    }
+  },
+  "userProfile": {
+    "title": "Perfil de Usuario",
+    "subtitle": "Gestione su información personal y detalles de suscripción.",
+    "labels": {
+      "id": "ID de Cuenta",
+      "email": "Correo Electrónico",
+      "fullName": "Nombre Completo",
+      "tier": "Plan",
+      "status": "Estado",
+      "aiUsed": "Generaciones IA Usadas"
+    },
+    "placeholders": {
+      "fullName": "Introduzca su nombre completo"
+    },
+    "buttons": {
+      "save": "Guardar",
+      "saving": "Guardando..."
+    },
+    "alerts": {
+      "success": "¡Perfil actualizado con éxito!",
+      "error": "Error al actualizar el perfil."
+    }
+  },
+  "usage": {
+    "title": "Uso y Límites",
+    "subtitle": "Supervise el uso de su cuenta, límites y funciones disponibles.",
+    "plan": {
+      "current": "Plan Actual"
+    },
+    "stats": {
+      "sites": "Sitios Activos",
+      "sitesDesc": "Número de proyectos creados de su límite.",
+      "ai": "Generaciones IA",
+      "aiDesc": "Cantidad total de imágenes y consultas IA generadas."
+    },
+    "features": {
+      "title": "Funciones Disponibles",
+      "domains": "Dominios Personalizados",
+      "leads": "Formularios de Contacto",
+      "catalogs": "Catálogos E-Commerce"
+    }
+  },
+  "modal": {
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "ok": "Aceptar"
+  },
+  "upgradeModal": {
+    "title": "Se requiere actualización",
+    "unlockFeatures": "Desbloquear funciones:",
+    "features": {
+      "customDomains": "Dominios personalizados",
+      "aiGenerations": "Generaciones de IA",
+      "leadForms": "Formularios de contacto (SMTP)",
+      "catalogs": "Catálogos de productos"
+    },
+    "upgradeTo": "Mejorar a {tier}"
+  },
+  "billing": {
+    "buttons": {
+      "upgrade": "Mejorar a {tier}",
+      "downgrade": "Bajar a {tier}",
+      "current": "Plan actual"
+    },
+    "currentPlan": "Plan actual:",
+    "usingLimits": "Actualmente usas los límites del plan {tier}.",
+    "freemium": {
+      "title": "Freemium",
+      "desc": "Perfecto para probar la plataforma.",
+      "f1": "1 Sitio web",
+      "f2": "Sin dominios personalizados",
+      "f3": "Sin formularios",
+      "f4": "Sin catálogos"
+    },
+    "starter": {
+      "badge": "Más popular",
+      "title": "Starter",
+      "desc": "Genial para pequeñas empresas.",
+      "f1": "5 Sitios web",
+      "f2": "Dominios personalizados",
+      "f3": "Formularios (SMTP)",
+      "f4": "Generación IA de imágenes",
+      "f5": "Sin catálogos"
+    },
+    "pro": {
+      "title": "Pro",
+      "desc": "Para agencias y tiendas en crecimiento.",
+      "f1": "10 Sitios web",
+      "f2": "Dominios personalizados",
+      "f3": "Formularios (SMTP)",
+      "f4": "Generación IA de imágenes",
+      "f5": "Catálogos de productos"
+    },
+    "buttons": {
+      "current": "Plan actual",
+      "downgrade": "Bajar a {tier}",
+      "upgrade": "Mejorar a {tier}"
+    },
+    "alerts": {
+      "cannotDowngradeTitle": "¡No se puede cambiar de plan!",
+      "cannotDowngradeMsg": "Actualmente tienes {sites} sitios activos, pero el plan {tier} solo permite {limit}.\n\nPor favor, detén algunos sitios primero.",      "confirmDowngradeTitle": "¿Estás seguro?",
+      "confirmDowngradeMsg": "¿Seguro que quieres bajar al plan {tier}?\n\nPerderás acceso a las funciones premium. Asegúrate de haber desactivado estos componentes en tus proyectos.",
+      "redirectingTitle": "Redirigiendo",
+      "redirectingMsg": "Redirigiendo a la pasarela de pago de Stripe para el plan {tier}..."
+    }
+  },
+  "common": {
+    "alerts": {
+      "success": "Éxito",
+      "error": "Error",
+      "warning": "Advertencia",
+      "info": "Información",
+      "confirm": "¿Estás seguro?",
+      "saveSuccess": "¡Guardado exitosamente!",
+      "deleteSuccess": "¡Eliminado exitosamente!",
+      "deploySuccess": "¡Despliegue iniciado exitosamente!",
+      "actionFailed": "Algo salió mal. Por favor, inténtalo de nuevo.",
+      "loading": "Procesando..."
+    },
+    "buttons": {
+      "ok": "OK",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar",
+      "save": "Guardar"
+    }
+  },
+  "support": {
+    "title": "Soporte y Contacto",
+    "subtitle": "¿Encontraste un error o tienes alguna pregunta? ¡Háznoslo saber!",
+    "labels": {
+      "subject": "Tema / Tipo de problema",
+      "message": "Tu Mensaje",
+      "attachments": "Archivos adjuntos (Opcional)"
+    },
+    "placeholders": {
+      "select": "Selecciona un tema...",
+      "message": "Por favor, describe tu problema en detalle..."
+    },
+    "buttons": {
+      "sending": "Enviando...",
+      "send": "Enviar Mensaje"
+    },
+    "upload": {
+      "click": "Haz clic para subir",
+      "drag": "o arrastra y suelta",
+      "formats": "SVG, PNG, JPG o PDF (Máx. 5MB)"
+    },
+    "alerts": {
+      "fileLimitTitle": "Advertencia",
+      "fileLimitMsg": "Puedes subir un máximo de 5 archivos.",
+      "successTitle": "Éxito",
+      "successMsg": "¡Tu mensaje ha sido enviado con éxito!",
+      "errorTitle": "Error",
+      "errorMsg": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
+    },
+    "topics": {
+      "question": "Pregunta general",
+      "bug": "Informe de error",
+      "feature": "Solicitud de función",
+      "billing": "Problema de facturación",
+      "other": "Otro"
+    }
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "de": "Alemán",
+    "it": "Italiano",
+    "ru": "Ruso",
+    "uk": "Ucraniano",
+    "ee": "Estonio",
+    "ca": "Catalán"
+  }
+}

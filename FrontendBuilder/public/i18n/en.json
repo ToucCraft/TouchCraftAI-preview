@@ -1,0 +1,781 @@
+{
+  "nav": {
+    "howItWorks": "How it Works",
+    "features": "Features",
+    "blocks": "Blocks",
+    "pricing": "Pricing",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Ship your ideas faster",
+    "titleLine1": "Build the future",
+    "titleLine2": "with a prompt",
+    "description": "TouchCraft unites marketers, designers, and developers. Generate real apps with clean code, live previews, and instant deployment. Your imagination is the only limit.",
+    "startFree": "Start for free",
+    "watchDemo": "Watch Demo"
+  },
+  "workflow": {
+    "subtitle": "Workflow",
+    "title": "3 steps to production.",
+    "step1Title": "Describe your vision",
+    "step1Desc": "Simply type what you want to build. Tell our AI about your business, color preferences, and required sections.",
+    "step2Title": "AI generates the code",
+    "step2Desc": "TouchCraft instantly creates a Vue.js application, structures the layout, writes copy, and generates images.",
+    "step3Title": "Deploy instantly",
+    "step3Desc": "Click publish. We containerize your app, configure Nginx, and launch it to a live domain with SSL in seconds."
+  },
+  "features": {
+    "subtitle": "Everything you need",
+    "title": "From prompt to production.",
+    "description": "TouchCraft provides a complete ecosystem to generate, manage, and scale your web applications without writing a single line of code.",
+    "item1Title": "AI-Powered Generation",
+    "item1Desc": "Generate complete, production-ready Vue.js websites with layouts, copy, and images from a single descriptive prompt.",
+    "item2Title": "Instant Deployment",
+    "item2Desc": "Your site is automatically containerized with Docker and deployed with SSL. Attach custom domains in one click.",
+    "item3Title": "Native Localization",
+    "item3Desc": "Built-in multi-language support. AI automatically translates your entire site into up to 7 languages with clean routing.",
+    "item4Title": "Built-in CRM & Leads",
+    "item4Desc": "Capture visitor data instantly. Integrated lead management dashboard with automatic SMTP email notifications.",
+    "item5Title": "Dynamic Catalog",
+    "item5Desc": "Create product showcases with image galleries. Filter product visibility based on user language or region dynamically.",
+    "item6Title": "AI Chat Editor",
+    "item6Desc": "Need changes? Just ask. Our AI assistant modifies colors, text, and structure in real-time within the visual editor."
+  },
+  "blocks": {
+    "subtitle": "Building Blocks",
+    "title": "Everything you need to build.",
+    "description": "Mix and match intelligent sections. The AI automatically fills them with relevant content and high-quality images.",
+    "hero": "Hero Section",
+    "features": "Features",
+    "aboutUs": "About Us",
+    "faq": "FAQ",
+    "maps": "Google Maps",
+    "leadForms": "Lead Forms"
+  },
+  "about": {
+    "subtitle": "Our Mission",
+    "title": "Democratizing Web Development.",
+    "para1": "We built TouchCraft because we believe that launching a professional, fast, and scalable website shouldn't require a team of engineers or weeks of back-and-forth.",
+    "para2": "By combining the power of Large Language Models with modern frameworks like Vue.js and Docker, we've created a platform where your ideas turn into reality at the speed of thought.",
+    "stat1": "Faster",
+    "stat2": "Customizable"
+  },
+  "pricing": {
+    "subtitle": "Pricing",
+    "title": "Scale at your own pace.",
+    "description": "Start for free, upgrade when you need custom domains, e-commerce features, and more power.",
+    "perMonthFirst": "/ first month",
+    "perMonth": "/ month",
+    "mostPopular": "Most Popular",
+    "startFreeTrial": "Start Free Trial",
+    "getStarted": "Get Started",
+    "upgradePro": "Upgrade to Pro",
+    "free": {
+      "name": "Freemium",
+      "desc": "Perfect to test the waters and see the AI magic in action.",
+      "feature1": "1 Website included",
+      "feature2": "Basic AI Generation",
+      "feature3": "Free .touch-craft.com domain",
+      "feature4": "No custom domains",
+      "feature5": "No Lead Forms"
+    },
+    "starter": {
+      "name": "Starter",
+      "desc": "For freelancers and small businesses needing professional presence.",
+      "feature1": "Up to 5 Websites",
+      "feature2": "Custom Domains (SSL included)",
+      "feature3": "AI Image Generation",
+      "feature4": "Lead Forms & CRM Access",
+      "feature5": "No Product Catalog"
+    },
+    "pro": {
+      "name": "Pro",
+      "desc": "For agencies and growing e-commerce brands.",
+      "feature1": "Up to 10 Websites",
+      "feature2": "Dynamic Product Catalog",
+      "feature3": "Auto-translation (Up to 7 languages)",
+      "feature4": "Custom SMTP Email Alerts",
+      "feature5": "Priority Support"
+    }
+  },
+  "contact": {
+    "subtitle": "Get in Touch",
+    "title": "Ready to transform your workflow?",
+    "description": "Drop us a message and our team will get back to you shortly.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "captchaQ": "How much is",
+    "captchaError": "Incorrect answer. Please try again.",
+    "sending": "Sending message...",
+    "sendBtn": "Send Message",
+    "successMsg": "Message sent successfully! We will contact you soon.",
+    "errorMsg": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "description": "The ultimate AI website builder. Generate, edit, and deploy production-ready applications in seconds.",
+    "product": "Product",
+    "company": "Company",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 TouchCraft Inc. All rights reserved."
+  },
+  "privacy": {
+    "backToHome": "Back to Home",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "intro": "Welcome to <strong>TouchCraft</strong>. We respect your privacy and are committed to protecting your personal data in accordance with the <strong>General Data Protection Regulation (EU) 2016/679 (GDPR)</strong> and the Spanish Organic Law 3/2018 on the Protection of Personal Data and Guarantee of Digital Rights (<strong>LOPDGDD</strong>).",
+    "sec1": {
+      "title": "1. Data Controller Identity",
+      "entity": "Entity Name:",
+      "email": "Email for Privacy Inquiries:"
+    },
+    "sec2": {
+      "title": "2. Our Dual Role (Controller vs. Processor)",
+      "desc": "Due to the nature of our SaaS website builder platform, we act in two different capacities:",
+      "li1": "<strong>As a Data Controller:</strong> When you (the user) create an account on TouchCraft, purchase a subscription, or contact our support. We decide why and how your data is processed.",
+      "li2": "<strong>As a Data Processor:</strong> When you use TouchCraft to host your website and collect information from your own clients (e.g., through Lead Forms on your generated website). In this case, <strong>you are the Data Controller</strong> of your clients' data, and we merely process and store it on your behalf. We will never use your clients' data for our own purposes."
+    },
+    "sec3": {
+      "title": "3. What Information We Collect and Why",
+      "th1": "Data Type",
+      "th2": "Purpose of Processing",
+      "th3": "Legal Basis (GDPR Art. 6)",
+      "r1c1": "<strong>Account Data:</strong> Name, Email, Password, Auth0 Profile.",
+      "r1c2": "To create and manage your account, provide access to the builder.",
+      "r1c3": "Performance of a Contract.",
+      "r2c1": "<strong>Usage Data & Analytics:</strong> IP address, device info, GA4 data.",
+      "r2c2": "To ensure platform security, prevent fraud, and analyze traffic to improve UI/UX.",
+      "r2c3": "Legitimate Interest & Consent (for GA4).",
+      "r3c1": "<strong>AI Prompts:</strong> Texts you input to generate websites.",
+      "r3c2": "To generate code, translations, and images via third-party AI APIs.",
+      "r3c3": "Performance of a Contract."
+    },
+    "sec4": {
+      "title": "4. Third-Party Services & International Transfers",
+      "desc": "We do not sell your personal data. However, to provide our Services, we share strictly necessary data with trusted third-party service providers:",
+      "li1": "<strong>Google LLC (Gemini API & Google Analytics 4):</strong> Used for AI website generation and traffic analysis. Data may be transferred to the US under Standard Contractual Clauses (SCCs) and the EU-US Data Privacy Framework.",
+      "li2": "<strong>Auth0:</strong> Used for secure user authentication and login management.",
+      "li3": "<strong>Cloud Providers (e.g., DigitalOcean / AWS):</strong> Used for hosting your websites and our databases within European data centers where possible."
+    },
+    "sec5": {
+      "title": "5. Data Retention",
+      "desc": "We retain your personal data only for as long as your account is active or as needed to provide you with the Services. If you request account deletion, we will delete your data within 30 days, except for data we are legally required to retain (e.g., invoices for tax purposes under Spanish law for up to 5 years)."
+    },
+    "sec6": {
+      "title": "6. Your Rights (ARCO+ Rights)",
+      "desc": "Under the GDPR and LOPDGDD, you have the following rights regarding your personal data:",
+      "li1": "<strong>Access:</strong> Request a copy of the data we hold about you.",
+      "li2": "<strong>Rectification:</strong> Correct inaccurate or incomplete data.",
+      "li3": "<strong>Erasure (Right to be Forgotten):</strong> Request deletion of your data when it is no longer necessary.",
+      "li4": "<strong>Restriction:</strong> Ask us to suspend the processing of your data.",
+      "li5": "<strong>Data Portability:</strong> Receive your data in a structured, machine-readable format.",
+      "li6": "<strong>Withdraw Consent:</strong> Withdraw your consent for non-essential cookies or newsletters at any time.",
+      "contact": "To exercise these rights, email us at"
+    },
+    "sec7": {
+      "title": "7. Right to Lodge a Complaint",
+      "desc": "If you believe that your data protection rights have been violated, you have the right to lodge a complaint with the Spanish Data Protection Agency (<strong>Agencia Española de Protección de Datos - AEPD</strong>).",
+      "website": "Website:",
+      "address": "Address:"
+    },
+    "sec8": {
+      "title": "8. Cookies Policy",
+      "desc": "We use essential cookies to maintain sessions (e.g., Auth0 authentication) and optional analytics cookies (Google Analytics 4). You can manage your preferences at any time using the Cookie settings banner located at the bottom of our website."
+    }
+  },
+  "createSite": {
+    "title": "Setup New Website",
+    "labels": {
+      "businessName": "Business Name",
+      "niche": "Niche",
+      "nichePlaceholder": "e.g. Technology Consulting",
+      "description": "Description (AI context)",
+      "sections": "Select Page Sections",
+      "languages": "Languages",
+      "langSelectPlaceholder": "Select language...",
+      "legal": "Legal & Contact Details",
+      "legalName": "Legal Name",
+      "taxId": "NIF / VAT / TAX ID",
+      "address": "Physical Address",
+      "phone": "Phone Number",
+      "email": "Contact Email"
+    },
+    "upgrade": {
+      "maxSites": "You've reached the maximum number of websites for your plan.",
+      "leadForms": "Lead contact forms are available starting from the Starter plan.",
+      "maxLanguagesPro": "Multilingual sites (more than 1 language) require the Pro plan."
+    },
+    "sections": {
+      "hero": "Hero",
+      "about": "About",
+      "features": "Features",
+      "faq": "FAQ",
+      "map": "Map",
+      "contacts": "Contacts",
+      "form": "Lead Form",
+      "gallery": "Gallery"
+    },
+    "smtpWarning": "SMTP configuration required to use Forms.",
+    "setupNow": "Setup now",
+    "buttons": {
+      "generating": "Generating Website...",
+      "generate": "Generate AI Website"
+    },
+    "alerts": {
+      "reqNameNiche": "Name and Niche are required.",
+      "reqLang": "Please add at least one language.",
+      "genFailed": "Generation Failed.",
+      "maxLanguages": "You have reached the maximum number of languages for your current plan."
+    }
+  },
+  "dashboard": {
+    "title": "Project Management",
+    "empty": {
+      "title": "You don't have any websites yet",
+      "desc": "Create your first AI-generated website in seconds.",
+      "btn": "Create a Website"
+    },
+    "menu": {
+      "logs": "Website Logs",
+      "delete": "Delete Site",
+      "stop": "Stop Site",
+      "start": "Resume Site"
+    },
+    "card": {
+      "visit": "Visit",
+      "deploy": "Deploy",
+      "edit": "Edit",
+      "editMobile": "Edit PC Only",
+      "editMobileTitle": "Editing is only available on desktop"
+    },
+    "modal": {
+      "logsTitle": "Container STD_OUT logs"
+    },
+    "alerts": {
+      "connectingLogs": "Connecting to Docker daemon...",
+      "logsUnavailable": "Logs unavailable or container is not running.",
+      "confirmDelete": "This will PERMANENTLY delete the site, files, and Docker container.",
+      "deleteFailed": "Delete failed.",
+      "confirmDeploy": "Launch deployment container?",
+      "deployFailed": "Deploy failed.",
+      "confirmStop": "Are you sure you want to stop this project?",
+      "confirmStart": "Are you sure you want to resume this project?",
+      "stopSuccess": "Project stopped successfully.",
+      "startSuccess": "Project resumed successfully."
+    }
+  },
+  "domainManager": {
+    "title": "Domain Management",
+    "empty": "You have no websites to manage domains for.",
+    "table": {
+      "projectName": "Project Name",
+      "withoutName": "Without name",
+      "currentDomain": "Current Domain (URL)",
+      "status": "Status",
+      "attachCustom": "Attach Custom Domain",
+      "notDeployed": "Not deployed",
+      "placeholder": "yourdomain.com",
+      "deployFirst": "Deploy first"
+    },
+    "dns": {
+      "title": "DNS Setup",
+      "instruction": "To connect your custom domain, create an A-record in your registrar's panel with the following data:"
+    },
+    "upgrade": {
+      "customDomains": "Connecting custom domains is available starting from the Starter plan."
+    },
+    "status": {
+      "active": "Active",
+      "building": "Building",
+      "pending": "Pending",
+      "error": "Error"
+    },
+    "buttons": {
+      "wait": "Wait...",
+      "set": "Set"
+    },
+    "alerts": {
+      "enterDomain": "Enter domain name",
+      "success": "✅ Domain activated successfully",
+      "error": "❌ Error configuring domain"
+    }
+  },
+  "leads": {
+    "title": "Incoming",
+    "subtitle": "Leads and Messages",
+    "chooseWebsite": "Choose website",
+    "withoutName": "Without name",
+    "loading": "Loading Leads...",
+    "noLeads": "No leads for this website yet.",
+    "empty": {
+      "title": "You don't have any website with Leads",
+      "btn": "Create a Website"
+    },
+    "table": {
+      "date": "Date",
+      "status": "Status",
+      "new": "New"
+    },
+    "fields": {
+      "name": "Name",
+      "full_name": "Full Name",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "email_address": "Email Address",
+      "phone": "Phone",
+      "phone_number": "Phone Number",
+      "message": "Message",
+      "company": "Company",
+      "subject": "Subject"
+    },
+    "alerts": {
+      "errorProjects": "Error loading projects",
+      "errorLeads": "Error loading leads"
+    }
+  },
+  "products": {
+    "title": "Products Catalog",
+    "subtitle": "Manage items, translations, and hide by language",
+    "chooseWebsite": "Choose website",
+    "withoutName": "Without name",
+    "empty": {
+      "title": "You don't have any websites",
+      "btn": "Create a Website"
+    },
+    "enable": {
+      "title": "Enable Catalog Features",
+      "desc": "This website doesn't have a catalog page yet. Enable it to start adding products, menus, or services.",
+      "loading": "Enabling...",
+      "btn": "Add Catalog Page"
+    },
+    "header": {
+      "productsCount": "Products",
+      "deploying": "Deploying...",
+      "saveBtn": "Save & Deploy",
+      "addBtn": "Add Product"
+    },
+    "card": {
+      "uploadImage": "Upload Image",
+      "changeImage": "Change",
+      "title": "Title",
+      "description": "Description",
+      "price": "Price",
+      "hideIn": "Hide In (Press Enter)",
+      "hidePlaceholder": "e.g. ar, tr...",
+      "images": "Images (Max 5)",
+      "categoryPlaceholder": "Enter category"
+    },
+    "defaults": {
+      "newProduct": "New Product",
+      "general": "General",
+      "catalog": "Catalog"
+    },
+    "alerts": {
+      "uploadFailed": "Failed to upload image",
+      "saveSuccess": "Catalog saved and site deployed successfully!",
+      "saveError": "Error saving or deploying catalog"
+    }
+  },
+  "waitingRoom": {
+    "title": "Account Pending",
+    "message": "Your account has been successfully created, but it requires administrator approval. Please check your email for activation instructions or wait for manual approval.",
+    "refreshBtn": "Refresh Status",
+    "logoutBtn": "Log Out"
+  },
+  "settings": {
+    "title": "Account Settings",
+    "subtitle": "Manage your profiles"
+  },
+  "cookieBanner": {
+    "title": "Cookie Preferences",
+    "description": "We use strictly necessary cookies to make our site work. We'd also like to set optional Google Analytics 4 (GA4) cookies to help us improve it.",
+    "privacyLink": "Read our Privacy Policy",
+    "necessary": {
+      "title": "Strictly Necessary",
+      "desc": "Essential for the platform to function. Cannot be disabled."
+    },
+    "analytics": {
+      "title": "Analytics (GA4)",
+      "desc": "Help us improve by collecting anonymous data."
+    },
+    "buttons": {
+      "acceptAll": "Accept All",
+      "save": "Save Choices",
+      "reject": "Reject Optional"
+    }
+  },
+  "smtpSettings": {
+    "title": "SMTP Settings",
+    "subtitle": "Connect your email to receive form submissions from your websites",
+    "labels": {
+      "host": "SMTP Server (Host)",
+      "port": "Port",
+      "username": "Login / Email",
+      "password": "Password (App Password)",
+      "fromEmail": "Sender Email (From)"
+    },
+    "placeholders": {
+      "host": "smtp.gmail.com",
+      "port": "465 or 587",
+      "username": "your@email.com",
+      "password": "••••••••",
+      "fromEmail": "noreply@mydomain.com"
+    },
+    "recommendation": "We recommend using App Passwords",
+    "buttons": {
+      "saving": "Saving...",
+      "save": "Save Profile"
+    },
+    "alerts": {
+      "success": "✅ SMTP settings saved successfully!",
+      "error": "❌ Error saving settings."
+    }
+  },
+  "editSite": {
+    "sidebar": {
+      "title": "Customizer",
+      "saveBtn": "Save"
+    },
+    "tabs": {
+      "ai": {
+        "title": "AI Assistant",
+        "placeholder": "Change colors, edit texts..."
+      },
+      "content": {
+        "title": "Content Editor",
+        "featureItems": "Feature Items",
+        "faqItems": "FAQ Items"
+      },
+      "design": {
+        "title": "Brand Palette & Fonts",
+        "typography": "Typography"
+      },
+      "business": {
+        "title": "Business Details",
+        "businessName": "Business Name",
+        "legalName": "Legal Name",
+        "email": "Email Address",
+        "phone": "Phone"
+      },
+      "socials": {
+        "title": "Social Links"
+      },
+      "assets": {
+        "title": "Visual Assets",
+        "image": "Image",
+        "processing": "Processing...",
+        "aiRedraw": "AI Redraw",
+        "upload": "Upload",
+        "promptPlaceholder": "Describe the image you want AI to generate..."
+      },
+      "favicon": {
+        "title": "Favicon / Logo",
+        "aiLogo": "AI Logo",
+        "logoPromptPlaceholder": "Describe your logo (e.g., minimalist blue bird)...",
+        "faviconPromptPlaceholder": "Describe favicon (e.g., flat app icon, letter T)..."
+      },
+      "structure": {
+        "title": "Page Structure",
+        "addBtn": "Add",
+        "smtpWarning": "Setup SMTP in Settings to enable Lead Forms."
+      },
+      "form": {
+        "title": "Form Editor",
+        "show": "Show",
+        "labelPlaceholder": "Label"
+      }
+    },
+    "publish": {
+      "building": "Building...",
+      "publishBtn": "Publish Live",
+      "confirmTitle": "Publish Website?",
+      "confirmDesc": "Are you sure you want to publish this website? It will become live and accessible online."
+    },
+    "toolbar": {
+      "hide": "Hide Customizer",
+      "show": "Show Customizer"
+    },
+    "props": {
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "description": "Description",
+      "cta_text": "CTA Text",
+      "cta_url": "Button Link",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "submit_button_text": "Submit Button Text",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "blocks": {
+      "hero": "Hero Section",
+      "about": "About Us",
+      "features": "Features",
+      "faq": "FAQ",
+      "map": "Map",
+      "contacts": "Contact Info",
+      "form": "Lead Form",
+      "smtpRequired": "(SMTP Required)",
+      "gallery": "Gallery"
+    },
+    "alerts": {
+      "errorLoad": "Error loading project.",
+      "deploySuccess": "Deployment successful!",
+      "deployFail": "Deployment failed.",
+      "aiError": "AI Editor Error",
+      "uploadFail": "Upload failed",
+      "aiGenError": "AI Generation Error",
+      "smtpWarning": "Please configure SMTP in Settings to use forms."
+    },
+    "defaults": {
+      "heroTitle": "New Hero",
+      "subtitle": "Subtitle",
+      "start": "Start",
+      "features": "Features",
+      "fast": "Fast",
+      "speed": "Speed",
+      "aboutUs": "About Us",
+      "established": "Established...",
+      "faq": "FAQ",
+      "gallery": "Our Gallery",
+      "how": "How?",
+      "easy": "Easy.",
+      "findUs": "Find Us",
+      "contact": "Contact",
+      "getInTouch": "Get in Touch",
+      "sendMessage": "Send us a message",
+      "sendNow": "Send Now",
+      "yourName": "Your Name",
+      "emailAddr": "Email Address",
+      "phoneLabel": "Phone",
+      "messageLabel": "Message"
+    }
+  },
+  "app": {
+    "nav": {
+      "mySites": "My Sites",
+      "createNew": "Create New",
+      "domains": "Domains",
+      "leads": "Leads",
+      "products": "Products",
+      "seo": "SEO",
+      "settings": "Settings",
+      "logout": "Log Out",
+      "usage": "Usage & Limits"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "backBtn": "Back to Home"
+  },
+  "seo": {
+    "title": "SEO Optimization",
+    "subtitle": "Manage meta tags for search engines or generate them with AI.",
+    "chooseWebsite": "Choose Website",
+    "unnamedProject": "Unnamed Project",
+    "noProjects": "No projects found",
+    "editingLanguage": "Editing Language:",
+    "generating": "Generating...",
+    "autoGenerate": "Auto-Generate AI",
+    "deploying": "Deploying...",
+    "saveDeploy": "Save & Deploy",
+    "metaTitle": "Meta Title",
+    "titleRec": "Recommended: 50-60 characters.",
+    "metaDesc": "Meta Description",
+    "descRec": "Recommended: 150-160 characters.",
+    "keywords": "Keywords",
+    "keywordsRec": "Comma separated list of keywords.",
+    "alerts": {
+      "genFail": "Failed to generate SEO via AI.",
+      "saveSuccess": "SEO Settings Saved & Deployed!",
+      "saveError": "Error saving SEO."
+    },
+    "upgrade": {
+      "aiGenerations": "AI SEO generation is available starting from the Starter plan."
+    }
+  },
+  "userProfile": {
+    "title": "User Profile",
+    "subtitle": "Manage your personal information and view subscription details.",
+    "labels": {
+      "id": "Account ID",
+      "email": "Email Address",
+      "fullName": "Full Name",
+      "tier": "Plan",
+      "status": "Status",
+      "aiUsed": "AI Generations Used"
+    },
+    "placeholders": {
+      "fullName": "Enter your full name"
+    },
+    "buttons": {
+      "save": "Save Changes",
+      "saving": "Saving..."
+    },
+    "alerts": {
+      "success": "Profile updated successfully!",
+      "error": "Failed to update profile."
+    }
+  },
+  "usage": {
+    "title": "Usage & Limits",
+    "subtitle": "Monitor your account usage, limits, and available features.",
+    "plan": {
+      "current": "Current Plan"
+    },
+    "stats": {
+      "sites": "Active Sites",
+      "sitesDesc": "Number of projects created out of your plan's limit.",
+      "ai": "AI Generations",
+      "aiDesc": "Total amount of AI queries and images generated."
+    },
+    "features": {
+      "title": "Available Features",
+      "domains": "Custom Domains",
+      "leads": "Lead Forms",
+      "catalogs": "E-Commerce Catalogs"
+    }
+  },
+  "modal": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "ok": "OK"
+  },
+  "upgradeModal": {
+    "title": "Upgrade Required",
+    "unlockFeatures": "Unlock features:",
+    "features": {
+      "customDomains": "Custom Domains",
+      "aiGenerations": "AI Generations",
+      "leadForms": "Lead Forms (SMTP)",
+      "catalogs": "Product Catalogs"
+    },
+    "upgradeTo": "Upgrade to {tier}"
+  },
+  "billing": {
+    "buttons": {
+      "upgrade": "Upgrade to {tier}",
+      "downgrade": "Downgrade to {tier}",
+      "current": "Current Plan"
+    },
+    "currentPlan": "Current Plan:",
+    "usingLimits": "You are currently using the {tier} plan limits.",
+    "freemium": {
+      "title": "Freemium",
+      "desc": "Perfect for trying out the platform.",
+      "f1": "1 Website",
+      "f2": "No Custom Domains",
+      "f3": "No Lead Forms",
+      "f4": "No Catalogs"
+    },
+    "starter": {
+      "badge": "Most Popular",
+      "title": "Starter",
+      "desc": "Great for small businesses.",
+      "f1": "5 Websites",
+      "f2": "Custom Domains",
+      "f3": "Lead Forms (SMTP)",
+      "f4": "AI Image Gen",
+      "f5": "No Catalogs"
+    },
+    "pro": {
+      "title": "Pro",
+      "desc": "For growing agencies and stores.",
+      "f1": "10 Websites",
+      "f2": "Custom Domains",
+      "f3": "Lead Forms (SMTP)",
+      "f4": "AI Image Gen",
+      "f5": "Product Catalogs"
+    },
+    "buttons": {
+      "current": "Current Plan",
+      "downgrade": "Downgrade to {tier}",
+      "upgrade": "Upgrade to {tier}"
+    },
+    "alerts": {
+      "cannotDowngradeTitle": "Cannot downgrade!",
+      "cannotDowngradeMsg": "You currently have {sites} active sites, but the {tier} plan only allows {limit}.\n\nPlease stop some sites first.",      "confirmDowngradeTitle": "Are you sure?",
+      "confirmDowngradeMsg": "Are you sure you want to downgrade to {tier}?\n\nYou will lose access to premium features. Make sure you have disabled these components in your projects.",
+      "redirectingTitle": "Redirecting",
+      "redirectingMsg": "Redirecting to Stripe payment gateway for the {tier} plan..."
+    }
+  },
+  "common": {
+    "alerts": {
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Information",
+      "confirm": "Are you sure?",
+      "saveSuccess": "Saved successfully!",
+      "deleteSuccess": "Deleted successfully!",
+      "deploySuccess": "Deployment started successfully!",
+      "actionFailed": "Something went wrong. Please try again.",
+      "loading": "Processing..."
+    },
+    "buttons": {
+      "ok": "OK",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "save": "Save"
+    }
+  },
+  "support": {
+    "title": "Support & Contact",
+    "subtitle": "Found a bug or have a question? Let us know!",
+    "labels": {
+      "subject": "Topic / Issue Type",
+      "message": "Your Message",
+      "attachments": "Attachments (Optional)"
+    },
+    "placeholders": {
+      "select": "Select a topic...",
+      "message": "Please describe your issue in detail..."
+    },
+    "buttons": {
+      "sending": "Sending...",
+      "send": "Send Message"
+    },
+    "upload": {
+      "click": "Click to upload",
+      "drag": "or drag and drop",
+      "formats": "SVG, PNG, JPG or PDF (Max. 5MB)"
+    },
+    "alerts": {
+      "fileLimitTitle": "Warning",
+      "fileLimitMsg": "You can upload a maximum of 5 files.",
+      "successTitle": "Success",
+      "successMsg": "Your message has been sent successfully!",
+      "errorTitle": "Error",
+      "errorMsg": "Failed to send message. Please try again later."
+    },
+    "topics": {
+      "question": "General Question",
+      "bug": "Bug Report",
+      "feature": "Feature Request",
+      "billing": "Billing Issue",
+      "other": "Other"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "de": "German",
+    "it": "Italian",
+    "ru": "Russian",
+    "uk": "Ukrainian",
+    "ee": "Estonian",
+    "ca": "Catalan"
+  }
+}
